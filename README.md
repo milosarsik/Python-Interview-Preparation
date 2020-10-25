@@ -72,4 +72,4 @@ List comprehension supports multiple levels of looping. This can be used to crea
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
 ### Problems
-#### The Dutch National Flag Problem
+#### [The Dutch National Flag Problem](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/5.1dutchflagpartition.py)
