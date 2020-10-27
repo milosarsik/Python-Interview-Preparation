@@ -7,6 +7,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Arrays Syntax](#arrays-syntax)
 		* [Problems](#problems)
 			* [The Dutch National Flag Problem](#the-dutch-national-flag-problem)
+			* [Increment an Arbitrary-Precision Integer](#increment-an-arbitrary-precision-integer)
 
 # Elements of Programming Interviews in Python
 ## Arrays
@@ -73,3 +74,5 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 ### Problems
 #### [The Dutch National Flag Problem](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/5.1dutchflagpartition.py)
+#### [Increment an Arbitrary-Precision Integer](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/5.2plusone.py)
+
