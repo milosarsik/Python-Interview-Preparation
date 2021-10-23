@@ -74,7 +74,26 @@ List comprehension supports multiple levels of looping. This can be used to crea
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
 ### Problems
-#### [The Dutch National Flag Problem](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/5.1dutchflagpartition.py)
-#### [Increment an Arbitrary-Precision Integer](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/5.2plusone.py)
-#### [Multiply Two Arbitrary-Precision Integers](https://github.com/milosarsik/Python-Interview-Preparation-/blob/main/Elements%20of%20Programming%20Interviews%20in%20Python/Arrays/multiply.py)
-
+| Problem | LeetCode | Solution  | Completed |
+|---------|----------|-----------|-----------|
+| 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) | | &#9744; |
+| 5.2     | []() | | &#9744; |
+| 5.3     | []() | | &#9744; |
+| 5.4     | [55. Jump Game](https://leetcode.com/problems/jump-game/) | | &#9744; |
+| 5.5     | [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | | &#9744; |
+| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | | &#9744; |
+| 5.7	  | [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | | &#9744; |
+| 5.8     | [280. Wiggle Sort](https://leetcode.com/problems/wiggle-sort) | | &#9744; |
+| 5.9     | [204. Count Primes](https://leetcode.com/problems/count-primes) note: book asks to return a list of the primes | | &#9744; |
+| 5.10    | []() | | &#9744; |
+| 5.11    | [31. Next Permutation](https://leetcode.com/problems/next-permutation/) | | &#9744; |
+| 5.12    | []() | | &#9744; |
+| 5.13    | []() | | &#9744; |
+| 5.14    | [384. Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/) | | &#9744; |
+| 5.15    | []() | | &#9744; |
+| 5.16    | []() | | &#9744; |
+| 5.17    | [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | | &#9744; |
+| 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | | &#9744; |
+| 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; |
+| 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; |
+| DNE     | [1. Two Sum](https://leetcode.com/problems/two-sum/) | | :heavy_check_mark: |
