@@ -96,4 +96,4 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | | &#9744; |
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; |
-| DNE     | [1. Two Sum (Easy)](https://leetcode.com/problems/two-sum/) | [sol](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/TwoSum.py) | :heavy_check_mark: |
+| DNE     | [1. Two Sum (Easy)](https://leetcode.com/problems/two-sum/) | [sol](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: |
