@@ -11,7 +11,6 @@ You must write an algorithm that runs in O(log n) time.
 
 Time complexity: O(nlogn). We are doing a binary search because the array is sorted
 Space complexity: O(1). We are not using an array, we are just storing in single variables
-
 """
 
 class Solution:
