@@ -6,6 +6,7 @@ A subarray is a contiguous subsequence of the array.
 Time complexity: O(n). We are passing once.
 Space complexity: O(1). We are not using an array, we are just storing in single variables
 """
+
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         res = max(nums)
