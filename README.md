@@ -97,6 +97,8 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; | |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; | |
 | BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | |
+| BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
+| BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
 | BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
 | BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | |
 | BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
