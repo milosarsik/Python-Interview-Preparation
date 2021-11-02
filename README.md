@@ -6,9 +6,9 @@ This is a repository to store all of the solutions to every Python interview que
 	* Arrays
 		* [Arrays Syntax](#arrays-syntax)
 		* [Problems](#problems)
-			* [The Dutch National Flag Problem](#the-dutch-national-flag-problem)
-			* [Increment an Arbitrary-Precision Integer](#increment-an-arbitrary-precision-integer)
-			* [Multiply Two Arbitrary-Precision Integers](#multiply-two-arbitrary-precision-integers)
+			* [](#)
+			* [](#)
+			* [](#)
 
 # Elements of Programming Interviews in Python
 ## Arrays
@@ -81,7 +81,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.3     | []() | | &#9744; | |
 | 5.4     | [55. Jump Game](https://leetcode.com/problems/jump-game/) | | &#9744; | |
 | 5.5     | [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | | &#9744; | |
-| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | |
+| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | |
 | 5.7	  | [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | | &#9744; | |
 | 5.8     | [280. Wiggle Sort](https://leetcode.com/problems/wiggle-sort) | | &#9744; | |
 | 5.9     | [204. Count Primes](https://leetcode.com/problems/count-primes) note: book asks to return a list of the primes | | &#9744; | |
@@ -96,12 +96,43 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | | &#9744; | |
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; | |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; | |
-| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | |
-| BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
-| BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
-| BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
-| BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | |
-| BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
-| BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
-| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/ContainsDuplicate.py) | :heavy_check_mark: | |
-| BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | |
+| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | |
+| BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
+| BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
+| BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
+| BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | |
+| BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
+| BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
+| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/ContainsDuplicate.py) | :heavy_check_mark: | |
+| BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | |
+
+## Strings
+### String Syntax
+#### Instantiation
+
+### Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) | [Code]() | &#9744; | |
+| 6.2 	  | []() | [Code]() | &#9744; | |
+| 6.3     | [171. Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.4 	  | []() | [Code]() | &#9744; | |
+| 6.5 	  | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.6 	  | [186. Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.7 	  | [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.8     | [38. Count and Say](https://leetcode.com/problems/count-and-say/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.9 	  | [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.10 	  | [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.11 	  | []() | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.12 	  | [443. String Compression](https://leetcode.com/problems/string-compression/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.13 	  | [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| BLIND   | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Medium) 🟡 | [Code]() | &#9744; | |
+| BLIND   | [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) (Medium) 🟡 | [Code]() | &#9744; | |
+| BLIND   | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (Easy) 🟢 | [Code]() | &#9744; | |
+| BLIND   | [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/) (Medium) 🟡 | [Code]() | &#9744; | |
+| BLIND   | [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) (Hard) 🔴 | [Code]() | &#9744; | |
+| BLIND   | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Easy) 🟢 | [Code]() | &#9744; | |
+| BLIND   | [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) (Medium) 🟡 | [Code]() | &#9744; | |
+| BLIND   | [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) (Medium) 🟡 | [Code]() | &#9744; | |
+| BLIND   | [0. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) (Unknown) ⚫ | [Code]() | &#9744; | |
+
