@@ -96,7 +96,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | | &#9744; | |
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; | |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; | |
-| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | |
+| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | Use hash map to check for difference value (complement), map will add index of last occurrence of a num, don’t use same element twice |
 | BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
 | BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
 | BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
@@ -117,7 +117,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 6.2 	  | []() | [Code]() | &#9744; | |
 | 6.3     | [171. Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
 | 6.4 	  | []() | [Code]() | &#9744; | |
-| 6.5 	  | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
+| 6.5 	  | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Easy/ValidPalindrome.py) | ✔️ | Use left and right pointers. Update left and right until each one points at an alphanum. Then compare left and right, continue until left >= right. Don’t distinguish between upper and lowercase. Make own alphanum function |
 | 6.6 	  | [186. Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
 | 6.7 	  | [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
 | 6.8     | [38. Count and Say](https://leetcode.com/problems/count-and-say/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
