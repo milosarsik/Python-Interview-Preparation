@@ -136,3 +136,25 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Medium/PalindromicSubstrings.py) | ✔️ | |
 | BLIND   | [0. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) (Unknown) ⚫ | [Code]() | &#9744; | |
 
+
+## Linked Lists
+### Linked Lists Syntax
+#### Instantiation
+
+### Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/MergeTwoSortedLists.py) | ✔️ | |
+| 7.2     | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/ReverseLinkedList.py) | ✔️ | |
+| 7.3     | [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Easy) | [Code]() | &#9744; | |
+| 7.4     | [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (Easy) | [Code]() | &#9744; | |
+| 7.5     | []() (Easy) | [Code]() | &#9744; | |
+| 7.6     | [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) (Easy) | [Code]() | &#9744; | |
+| 7.7     | [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) (Easy) | [Code]() | &#9744; | |
+| 7.8     | [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) (Easy) | [Code]() | &#9744; | |
+| 7.9     | [61. Rotate List](https://leetcode.com/problems/rotate-list/) (Easy) | [Code]() | &#9744; | |
+| 7.10    | [328. Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) (Easy) | [Code]() | &#9744; | |
+| 7.11    | [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) (Easy) | [Code]() | &#9744; | |
+| 7.12    | [86. Partition List](https://leetcode.com/problems/partition-list/) (Easy) | [Code]() | &#9744; | |
+| 7.13    | [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) (Easy) | [Code]() | &#9744; | |
+| BLIND   | [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/LinkedListCycle.py) | ✔️ | |
