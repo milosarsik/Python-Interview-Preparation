@@ -11,6 +11,17 @@ This is a repository to store all of the solutions to every Python interview que
 			* [](#)
 
 # Elements of Programming Interviews in Python
+
+## Primitive Types
+### Primitive Types Syntax
+#### Instantiation
+
+### Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) | [Code]() | &#9744; | |
+
+
 ## Arrays
 ### Arrays Syntax
 #### Instantiation
