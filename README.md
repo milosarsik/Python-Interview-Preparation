@@ -3,6 +3,7 @@ This is a repository to store all of the solutions to every Python interview que
 
 # Table of Contents
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
+	* [Primitive Types](#primitive-types) 	
 	* Arrays
 		* [Arrays Syntax](#arrays-syntax)
 		* [Problems](#problems)
@@ -13,13 +14,42 @@ This is a repository to store all of the solutions to every Python interview que
 # Elements of Programming Interviews in Python
 
 ## Primitive Types
+Be very comfortable with the bitwise operators, particularly XOR.
+Understand how to use masks and create them in an machine independent way,
+Know fast ways to clear the lowermost set bit (and by extension, set the lowermost 0, get its
+index, etc.)
+Understand signedness and its implications to shifting.
+Consider using a cache to accelerate operations by using it to brute-force small inputs.
+Be aware that commutativity and associativity can be used to perform operations in parallel
+and reorder operations.
+
 ### Primitive Types Syntax
+```
+Operator Example Meaning
+&	a & b	Bitwise AND (equiv to product)
+|	a | b	Bitwise OR
+^	a ^ b	Bitwise XOR (exclusive OR)
+~	~a	Bitwise NOT (only unary operator)
+<<	a << n	Bitwise left shift
+>>	a >> n	Bitwise right shift
+```
+All binary bitwise operators have a corresponding compound operator that performs an augmented assignment:
+```
+Operator	Example	Equivalent to
+&=	a &= b	a = a & b
+|=	a |= b	a = a | b
+^=	a ^= b	a = a ^ b
+<<=	a <<= n	a = a << n
+>>=	a >>= n	a = a >> n
+```
+
+
 #### Instantiation
 
 ### Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) | [Code]() | &#9744; | |
+| 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
 
 
 ## Arrays
