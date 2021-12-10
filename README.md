@@ -49,6 +49,7 @@ Operator	Example	Equivalent to
 ### Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
+| 4.1     | []() () ⚪ | [Code]() | | |
 | 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
 
 
