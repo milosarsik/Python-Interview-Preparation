@@ -166,7 +166,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 ### Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/StringToIntegerATOI.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame. |
+| 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/StringToIntegerATOI.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame. |
 | 6.2 	  | []() | [Code]() | &#9744; | |
 | 6.3     | [171. Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
 | 6.4 	  | []() | [Code]() | &#9744; | |
