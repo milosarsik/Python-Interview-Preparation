@@ -146,7 +146,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.15    | []() | | &#9744; | |
 | 5.16    | []() | | &#9744; | |
 | 5.17    | [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | | &#9744; | |
-| 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | | &#9744; | |
+| 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SpiralMatrix.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame |
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; | |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; | |
 | BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | HASHMAP ➡️ Instantiate a hashmap. Loop through the array. Calculate the complement by subtracting the target by the current value of the index were on. If the complement is in the hashmap, return the current index and the index of the complement as a List. If it is not in the hashmap, add the current value of the index were on, to the hashmap, mapping the current value to the index. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
