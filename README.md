@@ -12,6 +12,9 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Strings](#strings)
 		* [Strings Syntax](#strings-syntax)
 		* [Strings Problems](#strings-problems)
+	* [Linked Lists](#linked-lists)
+		* [Linked Lists Syntax](#linked-lists-syntax)
+		* [Linked Lists Problems](#linked-lists-problems)
 
 # Elements of Programming Interviews in Python
 
