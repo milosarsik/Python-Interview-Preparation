@@ -9,6 +9,9 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Arrays](#arrays)
 		* [Arrays Syntax](#arrays-syntax)
 		* [Arrays Problems](#arrays-problems)
+	* [Strings](#strings)
+		* [Strings Syntax](#strings-syntax)
+		* [Strings Problems](#strings-problems)
 
 # Elements of Programming Interviews in Python
 
@@ -46,7 +49,7 @@ Operator	Example		Equivalent to
 ### Primitive Types Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 4.1     | []() () ⚪ | [Code]() | | |
+| 4.1     | []() () ⚫ (Unknown) | [Code]() | | |
 | 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Not solved, but it is in the hackathon time frame. Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
 
 
@@ -160,10 +163,9 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | ARRAY ➡️ Instantiate a result array with 1s, it will be the length of the given array. Start from the beginning of res and calculate the prefix (set to 1), set the res with the calculated prefix (prefix multiplied by nums[i]). Start from the end of res and calculate the postfix (set to 1, calculated by postfix multiplied by nums[i]), the res will be given as res multiplied by the postfix. Return the res array. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) if output array doesn't count as memory |
 
 ## Strings
-### String Syntax
-#### Instantiation
+### Strings Syntax
 
-### Problems
+### Strings Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
 | 6.1     | [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/StringToIntegerATOI.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame. |
@@ -192,14 +194,13 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 ## Linked Lists
 ### Linked Lists Syntax
-#### Instantiation
 
 ### Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
 | 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/MergeTwoSortedLists.py) | ✔️ | |
 | 7.2     | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/ReverseLinkedList.py) | ✔️ | |
-| 7.3     | [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Easy) | [Code]() | &#9744; | |
+| 7.3     | [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Medium/LinkedListCycleII.py) | &#9744; | ➡️ |
 | 7.4     | [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (Easy) | [Code]() | &#9744; | |
 | 7.5     | []() (Easy) | [Code]() | &#9744; | |
 | 7.6     | [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) (Easy) | [Code]() | &#9744; | |
