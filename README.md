@@ -129,7 +129,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 ### Arrays Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) | | &#9744; | |
+| 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SortColors.py) | ✔️ | PARTITION/PIVOT POINT ➡️ Instantiate a left and right pointer and a pivot point i. While i <= r, if nums[i] is zero do a swap with the left and the pivot point, if nums[i] is 2 do a swap with the right and pivot point, but do not increment the pivot point (that is why we decrement the pivot point in the if statment). Simply put we are breaking up the array into 3 section, 0, 1 and 2. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
 | 5.2     | []() | | &#9744; | |
 | 5.3     | []() | | &#9744; | |
 | 5.4     | [55. Jump Game](https://leetcode.com/problems/jump-game/) | | &#9744; | |
