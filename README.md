@@ -3,13 +3,12 @@ This is a repository to store all of the solutions to every Python interview que
 
 # Table of Contents
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
-	* [Primitive Types](#primitive-types) 	
-	* Arrays
+	* [Primitive Types](#primitive-types) 
+		* [Primitive Types Syntax](#primitive-types-syntax)
+		* [Primitive Types Problems](#primitive-types-problems)
+	* [Arrays](#arrays)
 		* [Arrays Syntax](#arrays-syntax)
-		* [Problems](#problems)
-			* [](#)
-			* [](#)
-			* [](#)
+		* [Arrays Problems](#arrays-problems)
 
 # Elements of Programming Interviews in Python
 
@@ -24,33 +23,34 @@ Be aware that commutativity and associativity can be used to perform operations 
 and reorder operations.
 
 ### Primitive Types Syntax
+Bitwise operations:
 ```
-Operator Example Meaning
-&	a & b	Bitwise AND (equiv to product)
-|	a | b	Bitwise OR
-^	a ^ b	Bitwise XOR (exclusive OR)
-~	~a	Bitwise NOT (only unary operator)
-<<	a << n	Bitwise left shift
->>	a >> n	Bitwise right shift
+Operator 	Example 	Meaning
+&		a & b		Bitwise AND (equiv to product)
+|		a | b		Bitwise OR
+^		a ^ b		Bitwise XOR (exclusive OR)
+~		~a		Bitwise NOT (only unary operator)
+<<		a << n		Bitwise left shift
+>>		a >> n		Bitwise right shift
 ```
 All binary bitwise operators have a corresponding compound operator that performs an augmented assignment:
 ```
-Operator	Example	Equivalent to
-&=	a &= b	a = a & b
-|=	a |= b	a = a | b
-^=	a ^= b	a = a ^ b
-<<=	a <<= n	a = a << n
->>=	a >>= n	a = a >> n
+Operator	Example		Equivalent to
+&=		a &= b		a = a & b
+|=		a |= b		a = a | b
+^=		a ^= b		a = a ^ b
+<<=		a <<= n		a = a << n
+>>=		a >>= n		a = a >> n
 ```
 
-
-#### Instantiation
-
-### Problems
+### Primitive Types Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
 | 4.1     | []() () ⚪ | [Code]() | | |
 | 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
+
+
+
 
 
 ## Arrays
@@ -115,7 +115,7 @@ List comprehension supports multiple levels of looping. This can be used to crea
 
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
-### Problems
+### Arrays Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
 | 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) | | &#9744; | |
