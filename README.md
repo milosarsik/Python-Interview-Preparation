@@ -198,7 +198,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 ## Linked Lists
 ### Linked Lists Syntax
 
-### Problems
+### Linked Lists Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
 | 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/MergeTwoSortedLists.py) | ✔️ | |
