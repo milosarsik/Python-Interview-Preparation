@@ -21,6 +21,10 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Binary Trees](#binary-trees)
 		* [Binary Trees Syntax](#binary-trees-syntax)
 		* [Binary Trees Problems](#binary-trees-problems)
+	* [Searching](#searching)
+		* [Searching Syntax](#searching-syntax)
+		* [Searching Problems](#searching-problems)
+
 
 # Elements of Programming Interviews in Python
 
@@ -247,10 +251,25 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 ### Binary Trees Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 9.1     | [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Binary%20Trees/Easy/BalancedBinaryTree.py) | ✔️ | RECURSIVE DFS ➡️ Create DFS function <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
+| 9.1     | [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Binary%20Trees/Easy/BalancedBinaryTree.py) | ✔️ | RECURSIVE DFS ➡️ Create a recursive DFS function. The base case will be when the node is null, you will return [True, 0] because it has a height of zero and it is balanced, therfore True. Then we will check the left and right child nodes, by calling the DFS function again. This will return the tuple. When we have the left and right tuple, we can check that it is balanced. To be balanced left and right must both be True, and the height must be less than or equal to one. We return a tuple [balanced, 1 + max(left, right)]. After creating the function, we call the DFS function on the root and return the boolean at position 0. Simply put we are recursively traversing to the bottom of the tree to its last nodes and then traversing back up, returning the height and the boolean. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
 
 
 
+
+## Heaps
+### Heaps Syntax
+
+### Heaps Problems
+
+
+## Searching
+### Searching Syntax
+
+### Searching Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 11.4     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
+| 11.8     | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (Medium) 🟡 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
 
