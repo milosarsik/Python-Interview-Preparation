@@ -264,12 +264,25 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 
 ## Searching
+
 ### Searching Syntax
 
 ### Searching Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 11.4     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
-| 11.8     | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (Medium) 🟡 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
+| 11.4     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Searching/Easy/Sqrt(x).py) | ✔️ | BINARY SEARCH ➡️ Use a binary searchy, find the mid point, square it and compare it to the k. <br/>Time Complexity: O(log(n))<br/>Space Complexity: O(1) |
+| 11.8     | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (Medium) 🟡 | [Code]() | &#9744; |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
+
+
+
+
+
+## Hash Tables
+
+### Hash Tables Syntax
+
+### Hash Tables Problems
+| 12.2     | [383. Ransom Note](https://leetcode.com/problems/ransom-note/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Hash%20Tables/Easy/RansomNote.py) | ✔️ | HASH TABLE ➡️ First solution using two hashtables <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(n + m) <br/><br/> HASH TABLE ➡️ Second solution using one hashtable and updating frequencies <br/>Time Complexity: O(n)<br/>Space Complexity: O(n)|
+| 12.X     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
