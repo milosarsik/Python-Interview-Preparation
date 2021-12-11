@@ -14,7 +14,10 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Strings Problems](#strings-problems)
 	* [Linked Lists](#linked-lists)
 		* [Linked Lists Syntax](#linked-lists-syntax)
-		* [Linked Lists Problems](#linked-lists-problems)
+			* [Linked Lists Problems](#linked-lists-problems)
+	* [Stacks and Queues](#stacks-and-queues)
+			* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
+			* [Stacks and Queues Problems](#stacks-and-queues-problems)
 
 # Elements of Programming Interviews in Python
 
@@ -217,3 +220,18 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/LinkedListCycle.py) | ✔️ | SET ➡️ You can use a set to keep track of nodes that we have gone through, however this takes up extra memory and is not the most optimal solution. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) <br/><br/> HARE AND TORTOISE ➡️ Create a slow and fast pointer, the slow pointer increments by one and the fast pointer increments by two. Once the two pointers are the same, return True. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
 | BLIND   | [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) (Hard) 🔴 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Hard/MergeKSortedLists.py) | &#9744; | Skipped |
 | BLIND   | [143. Reorder List](https://leetcode.com/problems/merge-k-sorted-lists/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Medium/ReorderList.py) | ✔️ | |
+
+## Stacks and Queues
+### Stacks and QueuesSyntax
+
+### Stacks and Queues Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 8.1     | [165. Min Stack](https://leetcode.com/problems/min-stack/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Easy/MinStack.py) | ✔️ | ➡️ <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(1)  |
+
+
+
+
+
+
+
