@@ -14,10 +14,10 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Strings Problems](#strings-problems)
 	* [Linked Lists](#linked-lists)
 		* [Linked Lists Syntax](#linked-lists-syntax)
-			* [Linked Lists Problems](#linked-lists-problems)
+		* [Linked Lists Problems](#linked-lists-problems)
 	* [Stacks and Queues](#stacks-and-queues)
-			* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
-			* [Stacks and Queues Problems](#stacks-and-queues-problems)
+		* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
+		* [Stacks and Queues Problems](#stacks-and-queues-problems)
 
 # Elements of Programming Interviews in Python
 
@@ -222,13 +222,13 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [143. Reorder List](https://leetcode.com/problems/merge-k-sorted-lists/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Medium/ReorderList.py) | ✔️ | |
 
 ## Stacks and Queues
-### Stacks and QueuesSyntax
+### Stacks and Queues Syntax
 
 ### Stacks and Queues Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
 |---------|----------|-----------|-----------|-------|
-| 8.1     | [165. Min Stack](https://leetcode.com/problems/min-stack/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Easy/MinStack.py) | ✔️ | ➡️ <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(1)  |
-
+| 8.1     | [165. Min Stack](https://leetcode.com/problems/min-stack/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/MinStack.py) | ✔️ | IMPLEMENTATION ➡️ This question is just implementation from scratch with an extra function to retrieve the minimum. <br/>Time Complexity: O(1) for all operations |
+| 8.6     | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/MinStack.py) | ✔️ | BFS ➡️ Instantiate a queue, this can be done using the collections library or by simply using .pop(0) to remove from the front. While we have a full queue, we want to for loop in the range of the length of the queue, so that we visit all of the nodes on that level. We pop from the front, add the value to the list and add the left and right child nodes to the queue. After the for loop, if the level array is not empty, we append it to the result array. The while loop restarts, and continues as long as the child nodes get added. Return the result array <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
 
 
