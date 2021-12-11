@@ -283,6 +283,8 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 ### Hash Tables Syntax
 
 ### Hash Tables Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
 | 12.2     | [383. Ransom Note](https://leetcode.com/problems/ransom-note/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Hash%20Tables/Easy/RansomNote.py) | ✔️ | HASH TABLE ➡️ First solution using two hashtables <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(n + m) <br/><br/> HASH TABLE ➡️ Second solution using one hashtable and updating frequencies <br/>Time Complexity: O(n)<br/>Space Complexity: O(n)|
 | 12.X     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
