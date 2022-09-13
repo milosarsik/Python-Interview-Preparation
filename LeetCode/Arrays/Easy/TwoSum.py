@@ -24,7 +24,8 @@ This solution will require a HASHMAP to be solved, and it can be done in one pas
 array as the key, and the indice of that integer as the value. Therefore, when we look up the integer (our complement), the hashmap
 will return the index of that integer. While we are iterating and inserting elements into the hash table, we also look back to 
 check if current element's complement already exists in the hash table. If it exists, we have found a solution and then return 
-the indices immediately.
+the indices as a LIST. If it is not in the hashmap, add the current value of the index were on, to the hashmap, mapping the current 
+value to the index.
 
 Ex. nums = [3,2,4], target = 6
 
