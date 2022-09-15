@@ -19,12 +19,12 @@ Solution Walkthrough
 
 There are two solutions we can code for this problem. There is a simple one line solution, and a longer for loop solution.
 
-The one line solution uses a set. Set's do not contain duplicates. Therefore when we compare the length of the set to the length of the 
+The one line solution uses a SET. SETs do not contain duplicates. Therefore when we compare the length of the set to the length of the 
 original array; if they are the same length, there are no duplicates, if they differ in length, there were duplicates and they were removed 
-when we created the set. 
+when we created the SET. 
 
-For the longer solution, istantiate a SET. Iterate through the list and check if current "num" is in the SET. 
-If it is, return true because it contains a duplicate. If it is not in the set, add it to the set and the loop continues to the next value. 
+For the longer solution, istantiate a SET. Iterate through the LIST and check if current "num" is in the SET. 
+If it is, return true because it contains a duplicate. If it is not in the SET, add it to the SET and the loop continues to the next value. 
 If the loop finishes, return false because we have not found a duplicate value.
 
 Ex. nums = [1,2,3,1]
