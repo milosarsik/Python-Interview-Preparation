@@ -4,8 +4,10 @@ This is a repository to store all of the solutions to every Python interview que
 # Table of Contents
 * [Python Basics](#python-basics)
 	* [Variables](#variables)
+	* [Math](#math)
 	* [If Statements](#if-statements)
 	* [Loops](#loops)
+	* [](#)
 	
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
 	* [Primitive Types](#primitive-types) 
@@ -31,13 +33,11 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Searching Problems](#searching-problems)
 
 # Python Basics
-
 ## Variables
-
 ### Dynamically Typed 
 Python variables are dynamically typed. This means that the interpreter assigns variables a type at **runtime** based on the variable's value at the time.
 `None` is equivalent to `null`, there is no value when a variable is set to `None`.
-```
+```python
 n = 0
 print('n =', n)
 >>> n = 0
@@ -54,14 +54,14 @@ print("n =", n)
 
 ### Multiple Assignments
 Use this shorthand notation to assign multiple variables, it makes the look code cleaner.
-```
+```python
 n, m = 0, "abc"
 n, m, z = 0.125, "abc", False
 ```
 
 ### Incrementing 
 There is no `++` incrementing in Python!
-```
+```python
 n = n + 1 # good
 n += 1    # good
 n++       # bad
@@ -69,9 +69,74 @@ n++       # bad
 
 If you wish to know more about Pythons built-in types, visit the documentation page [here](https://docs.python.org/3/library/stdtypes.html#)
 
+## Math
+### Division
+Division is python is decimal by default. Notice that we can use a double slash to round down. Division with negative numbers will result in rounding down, whereas in most languages it will be rounded closer to zero. If you want to round closer to zero, use decimal division and then convert the value 
+to an integer
+```python
+print(5 / 2)
+>>> 2.5
+
+print(5 // 2)
+>>> 2
+
+# Careful here with negative division
+print(-3 // 2)
+>>> -2
+
+# Workaround to round closer to zero
+print(int(-3 / 2))
+>>> -1
+```
+
+### Modulo
+Modding is similar to most languages, expect when we are modding negative values. To be consistent with other languages modulo, use a module. 
+```python
+print(10 % 3)
+>>> 1
+
+print(-10 % 3)
+>>> 2
+
+# To be consistent with other languages modulo
+import math
+from multiprocessing import heap
+print(math.fmod(-10, 3))
+>>> -1
+```
+
+### More Math 
+#### Useful Functions
+```python
+print(math.floor(3 / 2))
+>>> 1
+
+print(math.ceil(3 / 2))
+>>> 2
+
+print(math.sqrt(2))
+>>> 1.4142135623730951
+
+print(math.pow(2, 3))
+>>> 8
+```
+
+#### +/- Infinity
+First two functions create max/min integers. Python numbers are infinite, so they never overflow. However, they will always be less that infinity!
+```python
+float("inf")
+float("-inf")
+
+print(math.pow(2, 200))
+>>> 1.6069380442589903e+60
+
+print(math.pow(2, 200) < float("inf"))
+>>> True
+```
+
 ## If Statements
 If-statements do not need parentheses or curly braces.
-```
+```python
 n = 1
 if n > 2:
     n -= 1
@@ -81,7 +146,7 @@ else:
     n += 2
 ```
 Parentheses are only needed for multi-line conditions.
-```
+```python
 n, m = 1, 2
 if ((n > 2 and 
     n != m) or n == m):
@@ -91,7 +156,7 @@ if ((n > 2 and
 ## Loops
 Remember that loops are inclusive, if you `range(5)` it will print from 0 to 5. 
 ### While Loops
-```
+```python
 n = 0
 while n < 5:
     print(n)
@@ -101,26 +166,25 @@ while n < 5:
 
 ### For Loop
 #### Looping from `i = 0` to `i = 4`
-```
+```python
 for i in range(5):
     print(i)
 >>> 0 1 2 3 4
 ```
 #### Looping from `i = 2` to `i = 5`
-```
+```python
 for i in range(2, 6):
     print(i)
 >>> 2 3 4 5
 ```
 #### Looping from `i = 5` to `i = 2` 
-```
+```python
 for i in range(5, 1, -1):
     print(i)
 >>> 5 4 3 2
 ```
 
 If you wish you wish to know more about Pythons control flow, visit the documentation page [here](https://docs.python.org/3/tutorial/controlflow.html)
-
 
 
 # Elements of Programming Interviews in Python
@@ -137,7 +201,7 @@ and reorder operations.
 
 ### Primitive Types Syntax
 Bitwise operations:
-```
+```python
 Operator 	Example 	Meaning
 &		a & b		Bitwise AND (equiv to product)
 |		a | b		Bitwise OR
