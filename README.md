@@ -1,7 +1,11 @@
 # Python-Interview-Preparation-
-This is a repository to store all of the solutions to every Python interview question that I do.
+This is a repository to store all of the solutions to every Python interview question that I do aswell as contains the basics of Python and algorithms.
 
 # Table of Contents
+* [Python Basics](#python-basics)
+	* [Variables](#variables)
+	* [If Statements](#if-statements)
+	
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
 	* [Primitive Types](#primitive-types) 
 		* [Primitive Types Syntax](#primitive-types-syntax)
@@ -24,6 +28,98 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Searching](#searching)
 		* [Searching Syntax](#searching-syntax)
 		* [Searching Problems](#searching-problems)
+
+# Python Basics
+
+## Variables
+
+### Dynamically Typed 
+Python variables are dynamically typed. This means that the interpreter assigns variables a type at **runtime** based on the variable's value at the time.
+`None` is equivalent to `null`, there is no value when a variable is set to `None`.
+```
+n = 0
+print('n =', n)
+>>> n = 0
+
+n = "abc"
+print('n =', n)
+>>> n = abc
+
+n = 4
+n = None
+print("n =", n)
+>>> n = None
+```
+
+### Multiple Assignments
+Use this shorthand notation to assign multiple variables, it makes the look code cleaner.
+```
+n, m = 0, "abc"
+n, m, z = 0.125, "abc", False
+```
+
+### Incrementing 
+There is no `++` incrementing in Python!
+```
+n = n + 1 # good
+n += 1    # good
+n++       # bad
+```
+
+If you wish to know more about Pythons built-in types, visit the documentation page [here](https://docs.python.org/3/library/stdtypes.html#)
+
+## If Statements
+If-statements do not need parentheses or curly braces.
+```
+n = 1
+if n > 2:
+    n -= 1
+elif n == 2:
+    n *= 2
+else:
+    n += 2
+```
+Parentheses are only needed for multi-line conditions.
+```
+n, m = 1, 2
+if ((n > 2 and 
+    n != m) or n == m):
+    n += 1
+```
+
+## Loops
+Remember that loops are inclusive, if you `range(5)` it will print from 0 to 5. 
+### While Loops
+```
+n = 0
+while n < 5:
+    print(n)
+    n += 1
+>>> 0 1 2 3 4
+```
+
+### For Loop
+#### Looping from `i = 0` to `i = 4`
+```
+for i in range(5):
+    print(i)
+>>> 0 1 2 3 4
+```
+#### Looping from `i = 2` to `i = 5`
+```
+for i in range(2, 6):
+    print(i)
+>>> 2 3 4 5
+```
+#### Looping from `i = 5` to `i = 2` 
+```
+for i in range(5, 1, -1):
+    print(i)
+>>> 5 4 3 2
+```
+
+If you wish you wish to know more about Pythons control flow, visit the documentation page [here](https://docs.python.org/3/tutorial/controlflow.html)
+
 
 
 # Elements of Programming Interviews in Python
