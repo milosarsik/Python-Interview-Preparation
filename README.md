@@ -10,9 +10,6 @@ This is a repository to store all of the solutions to every Python interview que
 	* [](#)
 	
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
-	* [Primitive Types](#primitive-types) 
-		* [Primitive Types Syntax](#primitive-types-syntax)
-		* [Primitive Types Problems](#primitive-types-problems)
 	* [Arrays](#arrays)
 		* [Arrays Syntax](#arrays-syntax)
 		* [Arrays Problems](#arrays-problems)
@@ -31,6 +28,9 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Searching](#searching)
 		* [Searching Syntax](#searching-syntax)
 		* [Searching Problems](#searching-problems)
+	* [Primitive Types](#primitive-types) 
+		* [Primitive Types Syntax](#primitive-types-syntax)
+		* [Primitive Types Problems](#primitive-types-problems)
 
 # Python Basics
 ## Variables
@@ -188,47 +188,6 @@ If you wish you wish to know more about Pythons control flow, visit the document
 
 
 # Elements of Programming Interviews in Python
-
-## Primitive Types
-Be very comfortable with the bitwise operators, particularly XOR.
-Understand how to use masks and create them in an machine independent way,
-Know fast ways to clear the lowermost set bit (and by extension, set the lowermost 0, get its
-index, etc.)
-Understand signedness and its implications to shifting.
-Consider using a cache to accelerate operations by using it to brute-force small inputs.
-Be aware that commutativity and associativity can be used to perform operations in parallel
-and reorder operations.
-
-### Primitive Types Syntax
-Bitwise operations:
-```python
-Operator 	Example 	Meaning
-&		a & b		Bitwise AND (equiv to product)
-|		a | b		Bitwise OR
-^		a ^ b		Bitwise XOR (exclusive OR)
-~		~a		Bitwise NOT (only unary operator)
-<<		a << n		Bitwise left shift
->>		a >> n		Bitwise right shift
-```
-All binary bitwise operators have a corresponding compound operator that performs an augmented assignment:
-```
-Operator	Example		Equivalent to
-&=		a &= b		a = a & b
-|=		a |= b		a = a | b
-^=		a ^= b		a = a ^ b
-<<=		a <<= n		a = a << n
->>=		a >>= n		a = a >> n
-```
-
-### Primitive Types Problems
-| Problem | LeetCode | Solution  | Completed | Notes |
-|---------|----------|-----------|-----------|-------|
-| 4.1     | []() () ⚫ (Unknown) | [Code]() | | |
-| 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Not solved, but it is in the hackathon time frame. Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
-
-
-
-
 
 ## Arrays
 ```python
@@ -469,6 +428,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
 | BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/ContainsDuplicate.py) | :heavy_check_mark: | Set <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 | BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | ARRAY ➡️ Instantiate a result array with 1s, it will be the length of the given array. Start from the beginning of res and calculate the prefix (set to 1), set the res with the calculated prefix (prefix multiplied by nums[i]). Start from the end of res and calculate the postfix (set to 1, calculated by postfix multiplied by nums[i]), the res will be given as res multiplied by the postfix. Return the res array. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) if output array doesn't count as memory |
+| BLIND   | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Easy/ValidAnagram.py) |  |  |
 
 ## Strings
 ### Strings Syntax
@@ -583,3 +543,43 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 12.2     | [383. Ransom Note](https://leetcode.com/problems/ransom-note/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Hash%20Tables/Easy/RansomNote.py) | ✔️ | HASH TABLE ➡️ First solution using two hashtables <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(n + m) <br/><br/> HASH TABLE ➡️ Second solution using one hashtable and updating frequencies <br/>Time Complexity: O(n)<br/>Space Complexity: O(n)|
 | 12.X     | [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/) (Easy) 🟢 | [Code]() | ✔️ |  ➡️  <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
 
+
+
+
+
+## Primitive Types
+Be very comfortable with the bitwise operators, particularly XOR.
+Understand how to use masks and create them in an machine independent way,
+Know fast ways to clear the lowermost set bit (and by extension, set the lowermost 0, get its
+index, etc.)
+Understand signedness and its implications to shifting.
+Consider using a cache to accelerate operations by using it to brute-force small inputs.
+Be aware that commutativity and associativity can be used to perform operations in parallel
+and reorder operations.
+
+### Primitive Types Syntax
+Bitwise operations:
+```python
+Operator 	Example 	Meaning
+&		a & b		Bitwise AND (equiv to product)
+|		a | b		Bitwise OR
+^		a ^ b		Bitwise XOR (exclusive OR)
+~		~a		Bitwise NOT (only unary operator)
+<<		a << n		Bitwise left shift
+>>		a >> n		Bitwise right shift
+```
+All binary bitwise operators have a corresponding compound operator that performs an augmented assignment:
+```
+Operator	Example		Equivalent to
+&=		a &= b		a = a & b
+|=		a |= b		a = a | b
+^=		a ^= b		a = a ^ b
+<<=		a <<= n		a = a << n
+>>=		a >>= n		a = a >> n
+```
+
+### Primitive Types Problems
+| Problem | LeetCode | Solution  | Completed | Notes |
+|---------|----------|-----------|-----------|-------|
+| 4.1     | []() () ⚫ (Unknown) | [Code]() | | |
+| 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Not solved, but it is in the hackathon time frame. Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
