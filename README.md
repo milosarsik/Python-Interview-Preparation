@@ -5,6 +5,7 @@ This is a repository to store all of the solutions to every Python interview que
 * [Python Basics](#python-basics)
 	* [Variables](#variables)
 	* [If Statements](#if-statements)
+	* [Loops](#loops)
 	
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
 	* [Primitive Types](#primitive-types) 
