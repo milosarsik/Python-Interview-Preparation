@@ -598,8 +598,8 @@ Reading a value of an array is O(1). Writing and removing a value is O(1).
 Inserting at the end is efficient, but adding at the front or the middle, is not efficient at all. We must shift all of the values to the right. If we add a the front, this is a O(n) time complexity because we are shifting all of the elements to the right.
 
 | Operation 		| Time Complexity |
-|-----------------------|-----------------|
-| r/w i-th element 	| O(1) |
-| Insert/Remove end 	| O(1) |
-| Insert middle 	| O(n) |
-| Remove middle		| O(n) |
+|-----------------------|:---------------:|
+| r/w i-th element 	| O(1)  	  |
+| Insert/Remove end 	| O(1) 		  |
+| Insert middle 	| O(n) 		  |	
+| Remove middle		| O(n) 		  |
