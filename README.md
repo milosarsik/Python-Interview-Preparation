@@ -583,3 +583,23 @@ Operator	Example		Equivalent to
 |---------|----------|-----------|-----------|-------|
 | 4.1     | []() () ⚫ (Unknown) | [Code]() | | |
 | 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Not solved, but it is in the hackathon time frame. Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
+
+
+# Algorithms and Data Structures for Beginners
+## Arrays
+### RAM
+Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
+RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
+Increment the address by the size of the value.
+
+### Static Arrays
+Static arrays are fixed size arrays. Python doesnt offer static, it has dynamic arrays as default. 
+Reading a value of an array is O(1). Writing and removing a value is O(1). 
+Inserting at the end is efficient, but adding at the front or the middle, is not efficient at all. We must shift all of the values to the right. If we add a the front, this is a O(n) time complexity because we are shifting all of the elements to the right.
+
+| Operation 		| Time Complexity |
+|-----------------------|-----------------|
+| r/w i-th element 	| O(1) |
+| Insert/Remove end 	| O(1) |
+| Insert middle 	| O(n) |
+| Remove middle		| O(n) |
