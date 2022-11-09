@@ -604,7 +604,7 @@ Inserting at the end is efficient, but adding at the front or the middle, is not
 | Remove middle		| O(n) 		  |
 
 ### Dynamic Arrays
-
+Dynamic arrays resize themselves when more space is requested, for example if we wish to add to the end middle or beginning of the array, but we do not have enough space in the current array.
 
 | Operation 		| Time Complexity |
 |-----------------------|:---------------:|
@@ -612,3 +612,13 @@ Inserting at the end is efficient, but adding at the front or the middle, is not
 | Insert/Remove end 	| O(1) 		  |
 | Insert middle 	| O(n) 		  |	
 | Remove middle		| O(n) 		  | 
+
+### Stacks
+The stack is nothing put an array. LIFO - last in, first out data structure. 
+
+| Operation 		| Time Complexity |
+|-----------------------|:---------------:|
+| Push			| O(1)  	  |
+| Pop		 	| O(1) 		  |
+| Peek/Top	 	| O(1) 		  |	
+
