@@ -20,8 +20,13 @@ Output: [1,2]
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Solution Walkthrough
 
-This solution will require a HASHMAP to be solved, and it can be done in one pass. The hashmap will carry the integer from the 
-array as the key, and the indice of that integer as the value. Therefore, when we look up the integer (our complement), the hashmap
+Without thinking about coding, lets discuss how we can solve this question. We need two number that add up to the target. If we subtract a number 
+from the target we get a value called the complement. Once we have our complement, we just have to look through the array and find it, if it exists,
+we return the index of the the number we subtracted with, and the index of the complement. But, how can we keep track of indices and values of numbers
+that we have already iterated over. 
+
+This solution will require a HASHMAP to be solved, and it can be done in one pass. The HASHMAP will carry the INTEGER from the 
+array as the key, and the indice of that INTEGER as the value. Therefore, when we look up the integer (our complement), the hashmap
 will return the index of that integer. While we are iterating and inserting elements into the hash table, we also look back to 
 check if current element's complement already exists in the hash table. If it exists, we have found a solution and then return 
 the indices as a LIST. If it is not in the hashmap, add the current value of the index were on, to the hashmap, mapping the current 
