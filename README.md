@@ -196,19 +196,6 @@ arr = [1, 2, 3]
 print(arr)
 >>> [1, 2, 3]
 
-# Can be used as a stack
-arr.append(4)
-arr.append(5)
-print(arr)
->>> [1, 2, 3, 4, 5]
-
-arr.pop()
-print(arr)
->>> [1, 2, 3, 4]
-
-arr.insert(1, 7)
-print(arr)
->>> [1, 7, 2, 3, 4]
 
 arr[0] = 0
 arr[3] = 0
@@ -397,8 +384,8 @@ List comprehension supports multiple levels of looping. This can be used to crea
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
 ### Arrays Problems
-| Problem | LeetCode | Solution  | Completed | Notes | Video Walkthrough | 
-|---------|----------|-----------|-----------|-------|-------------------|
+|  Problem  | LeetCode | Solution  |  Completed  | Notes | Video Walkthrough | 
+|:---------:|----------|-----------|:-----------:|-------|-------------------|
 | 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SortColors.py) | ✔️ | PARTITION/PIVOT POINT ➡️ Instantiate a left and right pointer and a pivot point i. While i <= r, if nums[i] is zero do a swap with the left and the pivot point, if nums[i] is 2 do a swap with the right and pivot point, but do not increment the pivot point (that is why we decrement the pivot point in the if statment). Simply put we are breaking up the array into 3 section, 0, 1 and 2. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)
 | 5.2     | []() | | &#9744; | |
 | 5.3     | []() | | &#9744; | |
@@ -422,14 +409,12 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/TwoSum.py) | :heavy_check_mark: | Hashmap<br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/channel/UCYaHY7PgmW0NwAQmQeVdr_Q) |
 | BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
 | BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
-
 | NC.io   | [27. Remove Element](https://leetcode.com/problems/remove-element/) (Easy) 🟢 | [Code](//) | :heavy_check_mark: | Max <br/>Time Complexity: //<br/>Space Complexity: // |
-
 | BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
 | BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | Max <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
 | BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
 | BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
-| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/ContainsDuplicate.py) | :heavy_check_mark: | Set <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
+| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/ContainsDuplicate.py) | :heavy_check_mark: | Use a **set()** data structure to solve this problem. It is a built-in data type in Python used to store collections of data. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=3OamzN90kPg&t=342s&ab_channel=NeetCode)|
 | BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | ARRAY ➡️ Instantiate a result array with 1s, it will be the length of the given array. Start from the beginning of res and calculate the prefix (set to 1), set the res with the calculated prefix (prefix multiplied by nums[i]). Start from the end of res and calculate the postfix (set to 1, calculated by postfix multiplied by nums[i]), the res will be given as res multiplied by the postfix. Return the res array. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) if output array doesn't count as memory |
 | BLIND   | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Easy/ValidAnagram.py) |  |  |
 
@@ -492,6 +477,21 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 ## Stacks and Queues
 ### Stacks and Queues Syntax
+```python
+# Can be used as a stack
+arr.append(4)
+arr.append(5)
+print(arr)
+>>> [1, 2, 3, 4, 5]
+
+arr.pop()
+print(arr)
+>>> [1, 2, 3, 4]
+
+arr.insert(1, 7)
+print(arr)
+>>> [1, 7, 2, 3, 4]
+```
 
 ### Stacks and Queues Problems
 | Problem | LeetCode | Solution  | Completed | Notes |
