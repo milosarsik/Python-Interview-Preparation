@@ -2,9 +2,10 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------
 125. Valid Palindrome (Blind)(LeetCode)
 
-A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it 
+reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
-Given a string s, return true if it is a palindrome, or false otherwise.
+Given a STRING "s", return true if it is a palindrome, or false otherwise.
 
 Example 1:
 
@@ -20,7 +21,7 @@ Explanation: "raceacar" is not a palindrome.
 
 Example 3:
 
-Input: s = " "
+Input: s = " " 
 Output: true
 Explanation: s is an empty string "" after removing non-alphanumeric characters. Since an empty string reads the same forward and backward, 
 it is a palindrome.
@@ -28,10 +29,26 @@ it is a palindrome.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Solution Walkthrough 
 
+We must note that we are only considering alphanumeric characters.
 
+The first way to solve this question is to build a new string and filter out all the characters that are not numebrs and letters. We can do this 
+by instantiating a variable, looping through the string and adding to the new string the alpha numeric characters. Once we have the new string,
+we can reverse it and compare it to the original. Note that this solution uses extra mememory and also uses built-in methods, like .isalnum().
 
-Ex. 
+The second solution, does not require any extra memory. We will be using a left and a right pointer set to the beginning and the end of the array,
+respectively. We will increment/decrement both pointers until we have reached an alphanumeric character. Once left and right are at a proper character, 
+we compare the two, if they are not the same, we return false showing that it is not a palindrome. 
+We must make sure that the left and the right pointer do not cross, to do this we will use a while loop.
 
+The third solution is for when we do not have any unwanted characters, therefore we dont need to make any checks. We will loop through half of 
+the string comparing the left with the right. The right side index will be calculated by subtracting the current index - 1, from the length of the
+string. This will decrement from the right without us needing to use pointers. 
+
+Ex. s = "A man, a plan, a canal: Panama"
+
+l   | r
+A     a
+        
 Return: true
 
 -----------
