@@ -391,7 +391,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.3     | []() | | &#9744; | |
 | 5.4     | [55. Jump Game](https://leetcode.com/problems/jump-game/) | | &#9744; | |
 | 5.5     | [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | | &#9744; | |
-| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | Max/Min<br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
+| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/121.%20BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | Use a sliding window technique, have a left and right pointer beginning next to eachother. Window size depends on if right is less than left. Keep track of the maximum profit. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=1pkOgXD63yU&ab_channel=NeetCode) |
 | 5.7	  | [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | | &#9744; | |
 | 5.8     | [280. Wiggle Sort](https://leetcode.com/problems/wiggle-sort) | | &#9744; | |
 | 5.9     | [204. Count Primes](https://leetcode.com/problems/count-primes) note: book asks to return a list of the primes | | &#9744; | |
