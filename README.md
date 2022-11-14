@@ -440,7 +440,6 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 6.13 	  | [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | &#9744; | |
 | BLIND   | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Medium/LongestSubstringWithoutRepeatingCharacters.py) | ✔️ | Use the sliding window technique, if we see the same character twice within the current window, shift the start position |
 | BLIND   | [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Medium/LongestPalindromicSubstring.py) | ✔️ | |
-| BLIND   | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Easy/ValidParentheses.py) | ✔️ | Push opening brace on stack, pop if matching close brace, at the end if the stack is empty, return "True". Use hashmap for the closed to open parentheses |
 | BLIND   | [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Medium/GroupAnagrams.py) | ✔️ | |
 | BLIND   | [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) (Hard) 🔴 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Hard/MinimumWindowSubstring.py) | ✔️ | |
 | BLIND   | [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Strings/Medium/LongestRepeatingCharacterReplacement.py) | ✔️ | |
@@ -494,10 +493,11 @@ print(arr)
 ```
 
 ### Stacks and Queues Problems
-| Problem | LeetCode | Solution  | Completed | Notes |
-|---------|----------|-----------|-----------|-------|
+| Problem | LeetCode | Solution  |  Completed  | Notes |
+|---------|----------|-----------|:-----------:|-------|
 | 8.1     | [165. Min Stack](https://leetcode.com/problems/min-stack/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/MinStack.py) | ✔️ | IMPLEMENTATION ➡️ This question is just implementation from scratch with an extra function to retrieve the minimum. <br/>Time Complexity: O(1) for all operations |
 | 8.6     | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/MinStack.py) | ✔️ | BFS ➡️ Instantiate a queue, this can be done using the collections library or by simply using .pop(0) to remove from the front. While we have a full queue, we want to for loop in the range of the length of the queue, so that we visit all of the nodes on that level. We pop from the front, add the value to the list and add the left and right child nodes to the queue. After the for loop, if the level array is not empty, we append it to the result array. The while loop restarts, and continues as long as the child nodes get added. Return the result array <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) |
+| BLIND   | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Easy/20.%20ValidParentheses.py) | ✔️ | Push opening brace on stack, pop if matching close brace by checking the hashmap, at the end if the stack is empty, return true. Use hashmap for the closed to open parentheses <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=WTzjTskDFMg&ab_channel=NeetCode) |
 
 
 
