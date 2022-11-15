@@ -17,7 +17,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Strings Syntax](#strings-syntax)
 		* [Strings Problems](#strings-problems)
 	* [Linked Lists](#linked-lists)
-		* [Linked Lists Syntax](#linked-lists-syntax)
+		* [Linked Lists Implementation](#linked-lists-implementation)
 		* [Linked Lists Problems](#linked-lists-problems)
 	* [Stacks and Queues](#stacks-and-queues)
 		* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
@@ -448,13 +448,51 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 
 ## Linked Lists
-### Linked Lists Syntax
+### Linked Lists Implementation
+In a **Singly Linked List** implementation, each node only points to one other node ahead of it. Below is the implementation of a linked list:
+```python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+# Implementation for Singly Linked List
+class LinkedList:
+    def __init__(self):
+        # Initialize the list with a 'dummy' node which makes removing a node from the beginning of list easier.
+        self.head = ListNode(-1)
+        self.tail = self.head
+    
+    def insertEnd(self, val):
+        self.tail.next = ListNode(val)
+        self.tail = self.tail.next
+
+    def remove(self, index):
+        i = 0
+        curr = self.head
+        while i < index and curr:
+            i += 1
+            curr = curr.next
+        
+        # Remove the node ahead of curr
+        if curr and curr.next:
+            if curr.next == self.tail:
+                self.tail = curr
+            curr.next = curr.next.next
+
+    def print(self):
+        curr = self.head.next
+        while curr:
+            print(curr.val, " -> ", end="")
+            curr = curr.next
+        print()
+```
 
 ### Linked Lists Problems
-| Problem | LeetCode | Solution  | Completed | Notes |
-|---------|----------|-----------|-----------|-------|
-| 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/MergeTwoSortedLists.py) | ✔️ | DUMMY NODE AND COMPARISON ➡️ Instantiate a dummy node. Instantiate a tail node that will hold dummy node. Start a while loop that will continue as long as there is at least one of list1 or list2. Compare the values of list1 and list2 and append them respectively to the tail.next. Once the while loop ends, create an if statement check to see if there are still any nodes in the lists. If there is, append them to the tail.next at the end. Finally, return the dummy.next node. <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(1)  |
-| 7.2     | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/ReverseLinkedList.py) | ✔️ | PREVIOUS AND CURRENT POINTERS ➡️ Instantiate a previous and current pointer to None and head respectively. Start a while loop which continues while we have a current. Add current.next to a temp variable. Then set current.next to the previous node. Set the previous node to the current node and then set the current node to the temp next variable. The temp saves the next value, we do the direction change and then shift our previous and current pointers. Once out of the while loop, we can return the previous node and the linked list is changed directionally. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)  |
+| Problem | LeetCode | Solution  |  Completed  | Notes | Video Walkthrough |
+|---------|----------|-----------|:-----------:|-------|-------------------|
+| 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/MergeTwoSortedLists.py) | ✔️ | DUMMY NODE AND COMPARISON ➡️ Instantiate a dummy node. Instantiate a tail node that will hold dummy node. Start a while loop that will continue as long as there is at least one of list1 or list2. Compare the values of list1 and list2 and append them respectively to the tail.next. Once the while loop ends, create an if statement check to see if there are still any nodes in the lists. If there is, append them to the tail.next at the end. Finally, return the dummy.next node. <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(1)  | [Video]() |
+| 7.2     | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/ReverseLinkedList.py) | ✔️ | PREVIOUS AND CURRENT POINTERS ➡️ Instantiate a previous and current pointer to None and head respectively. Start a while loop which continues while we have a current. Add current.next to a temp variable. Then set current.next to the previous node. Set the previous node to the current node and then set the current node to the temp next variable. The temp saves the next value, we do the direction change and then shift our previous and current pointers. Once out of the while loop, we can return the previous node and the linked list is changed directionally. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)  | [Video]() |
 | 7.3     | [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Medium/LinkedListCycleII.py) | ✔️ | SET ➡️ You can use a set to keep track of nodes that we have gone through, however this takes up extra memory and is not the most optimal solution. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) <br/><br/> HARE AND TORTOISE ➡️ Create a slow and fast pointer, the slow pointer increments by one and the fast pointer increments by two. Once the two pointers are the same, create a third pointer that starts at head. Take the new pointer and the old fast pointer and increment them by one until they are the same. Once they are the same, return the node. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)  |
 | 7.4     | [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) (Easy) | [Code]() | &#9744; | |
 | 7.5     | []() (Easy) | [Code]() | &#9744; | |
