@@ -31,7 +31,7 @@ in a temp value. Then at the end we will set the current as the temp that we sav
 Ex. head = [1,2,3,4,5]
 dummy = None
 
-doummy -> 1 <- 2  X  3 -> 4 -> 5
+dummy -> 1 <- 2  X  3 -> 4 -> 5
 
 Return: [5,4,3,2,1]
 
