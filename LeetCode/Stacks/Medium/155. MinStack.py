@@ -14,8 +14,6 @@ int top() gets the top element of the stack.
 int getMin() retrieves the minimum element in the stack.
 You must implement a solution with O(1) time complexity for each function.
 
- 
-
 Example 1:
 
 Input
@@ -39,12 +37,8 @@ minStack.getMin(); // return -2
 Solution Walkthrough
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-Ex. 
-
-
-Return: true
+The simplest way to have access to the minimum value at O(1) time is to have another stack that keeps track of the minimum everytime a new value
+is added to the stack. The rest of the operations are very basic.
 
 Time complexity: O(1). 
 Space complexity: O(n). We are using a stack 
