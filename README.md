@@ -311,7 +311,7 @@ print(arr[0][0], arr[3][3])
 arr = [[0] * 4] * 4
 ```
 
-Array problems often have simple brute.force solutions that use O(n) space, but there are subtler solutions that use the array itself to reduce space complexity to O(1).
+Array problems often have simple brute force solutions that use O(n) space, but there are subtler solutions that use the array itself to reduce space complexity to O(1).
 Filling an array from the front is slow, so see if it's possible to write values from the back.
 Instead of deleting an entry (which requires moving all entries to its left), consider overwriting it.
 When dealing with integers encoded by an array consider processing the digits from the backof the array. Alternately, reverse the array so the least-significant digit is the first entry.
@@ -384,8 +384,8 @@ List comprehension supports multiple levels of looping. This can be used to crea
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
 ### Arrays Problems
-|  Problem  | LeetCode | Solution  |  Completed  | Notes | Video Walkthrough | 
-|:---------:|----------|-----------|:-----------:|-------|-------------------|
+|  Problem  | LeetCode | Solution  |  Completed  | Notes |  Video Walkthrough  | 
+|:---------:|----------|-----------|:-----------:|-------|:-------------------:|
 | 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SortColors.py) | ✔️ | PARTITION/PIVOT POINT ➡️ Instantiate a left and right pointer and a pivot point i. While i <= r, if nums[i] is zero do a swap with the left and the pivot point, if nums[i] is 2 do a swap with the right and pivot point, but do not increment the pivot point (that is why we decrement the pivot point in the if statment). Simply put we are breaking up the array into 3 section, 0, 1 and 2. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)
 | 5.2     | []() | | &#9744; | |
 | 5.3     | []() | | &#9744; | |
@@ -489,8 +489,8 @@ class LinkedList:
 ```
 
 ### Linked Lists Problems
-| Problem | LeetCode | Solution  |  Completed  | Notes | Video Walkthrough |
-|---------|----------|-----------|:-----------:|-------|-------------------|
+| Problem | LeetCode | Solution  |  Completed  | Notes |  Video Walkthrough  |
+|---------|----------|-----------|:-----------:|-------|:-------------------:|
 | 7.1     | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/21.%20MergeTwoSortedLists.py) | ✔️ | Instantiate a dummy and a tail node that will hold dummy node at the start. Use a while loop that will continue as long as there is at least one of list1 or list2. Compare the values of list1 and list2 and append them respectively to the tail.next. Once the while loop ends, create an if statement check to see if there are still any nodes in the lists. If there is, append them to the tail.next at the end. Finally, return the dummy.next node. <br/>Time Complexity: O(n + m)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=XIdigk956u0&ab_channel=NeetCode) |
 | 7.2     | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Easy/206.%20ReverseLinkedList.py) | ✔️ | Use the **two pointer** technique. Instantiate a previous and current pointer to None and head respectively. Start a while loop which continues while we have a current. Add current.next to a temp variable. Then set current.next to the previous node. Set the previous node to the current node and then set the current node to the temp variable. The temp saves the next value, we do the direction change and then shift our previous and current pointers. Once out of the while loop, we can return the previous node and the linked list is changed directionally. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=G0_I-ZF0S38&t=2s&ab_channel=NeetCode) |
 | 7.3     | [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Linked%20Lists/Medium/LinkedListCycleII.py) | ✔️ | SET ➡️ You can use a set to keep track of nodes that we have gone through, however this takes up extra memory and is not the most optimal solution. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) <br/><br/> HARE AND TORTOISE ➡️ Create a slow and fast pointer, the slow pointer increments by one and the fast pointer increments by two. Once the two pointers are the same, create a third pointer that starts at head. Take the new pointer and the old fast pointer and increment them by one until they are the same. Once they are the same, return the node. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)  |
