@@ -5,8 +5,34 @@ This is a repository to store all of the solutions to every Python interview que
 * [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)	
 * [Advanced Algorithms](#advanced-algorithms)
  	* [Advanced Arrays](#advanced-arrays)
- 	 	* [Kadane's Algorithm](#kadane's-algorithm)
- 	 	* [Sliding Window Fixed Size]
+ 	 	* [Kadane's Algorithm](#kadanes-algorithm)
+ 	 	* [Sliding Window Fixed Size](#sliding-window-fixed-size)
+ 	 	* [Sliding Window Variable Size](#sliding-window-variable-size)
+ 	 	* [Two Pointers](#two-pointers)
+ 	 	* [Prefix Sums](#prefix-sums)
+	* [Advanced Linked Lists](#advanced-linked-lists)
+	 	* [Fast and Slow Pointers](#fast-and-slow-pointers)
+	* [Advanced Trees](#advanced-trees)
+		* [Trie](#trie)
+		* [Union Find](#union-find)
+		* [Segment Tree](#segment-tree)
+		* [Iterative DFS](#iterative-dfs)
+	* [Heaps](#aheaps)
+		* [Two Heaps](#two-heaps)
+	* [Backtracking](#backtracking)
+		* [Subsets](#subsets)
+		* [Combination](#combination)
+		* [Permutations](#permutations)
+	* [Advanced Graphs](#advanced-graphs)	
+		* [Dijkstra's](#dijkstra's)
+		* [Prim's](#prim's)
+		* [Kruskal's](#kruskal's)
+		* [Topological Sort](#topological-sort)
+	* [Advanced Dynamic Programming](#advanced-dynamic-programming)
+		* [0/1 Knapsack](#0/1-knapsack)
+		* [Unbounded Knapsack](#unbounded-knapsack)
+		* [LCS](#lcs)
+		* [Palindromes](#palindromes) 	 	 	 
 * [Python Basics](#python-basics)
 	* [Variables](#variables)
 	* [Math](#math)
@@ -79,12 +105,13 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 # Advanced Algorithms
 ## Advanced Arrays
 ### Kadane's Algorithm
-
-
+...
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
 |     ❌      | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) 🟡 | [Code]() | | [Video]() |
+|     ❌      | [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/) 🟡 | [Code]() | | [Video]() |
+|     ❌      | [978. Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) 🟡 | [Code]() | | [Video]() |
 
 
 # Python Basics
