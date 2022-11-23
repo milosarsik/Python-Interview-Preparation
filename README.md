@@ -2,13 +2,17 @@
 This is a repository to store all of the solutions to every Python interview question that I do aswell as contains the basics of Python and algorithms.
 
 # Table of Contents
+* [Algorithms and Data Structures for Beginners](#algorithms-and-data-structures-for-beginners)	
+* [Advanced Algorithms](#advanced-algorithms)
+ 	* [Advanced Arrays](#advanced-arrays)
+ 	 	* [Kadane's Algorithm](#kadane's-algorithm)
+ 	 	* [Sliding Window Fixed Size]
 * [Python Basics](#python-basics)
 	* [Variables](#variables)
 	* [Math](#math)
 	* [If Statements](#if-statements)
 	* [Loops](#loops)
 	* [](#)
-	
 * [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python)
 	* [Arrays](#arrays)
 		* [Arrays Syntax](#arrays-syntax)
@@ -31,6 +35,57 @@ This is a repository to store all of the solutions to every Python interview que
 	* [Primitive Types](#primitive-types) 
 		* [Primitive Types Syntax](#primitive-types-syntax)
 		* [Primitive Types Problems](#primitive-types-problems)
+
+# Algorithms and Data Structures for Beginners
+## Arrays
+### RAM
+Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
+RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
+Increment the address by the size of the value.
+
+### Static Arrays
+Static arrays are fixed size arrays. Python doesnt offer static, it has dynamic arrays as default. 
+Inserting at the end is efficient, but adding at the front or the middle, is not efficient at all. We must shift all of the values to the right. If we add a the front, this is a O(n) time complexity because we are shifting all of the elements to the right.
+
+| Operation 		| Time Complexity |
+|-----------------------|:---------------:|
+| r/w i-th element 	| O(1)  	  |
+| Insert/Remove end 	| O(1) 		  |
+| Insert middle 	| O(n) 		  |	
+| Remove middle		| O(n) 		  |
+
+### Dynamic Arrays
+Dynamic arrays resize themselves when more space is requested, for example if we wish to add to the end middle or beginning of the array, but we do not have enough space in the current array.
+
+| Operation 		| Time Complexity |
+|-----------------------|:---------------:|
+| r/w i-th element 	| O(1)  	  |
+| Insert/Remove end 	| O(1) 		  |
+| Insert middle 	| O(n) 		  |	
+| Remove middle		| O(n) 		  | 
+
+### Stacks
+The stack is nothing put an array. LIFO - last in, first out data structure. 
+
+| Operation 		| Time Complexity |
+|-----------------------|:---------------:|
+| Push			| O(1)  	  |
+| Pop		 	| O(1) 		  |
+| Peek/Top	 	| O(1) 		  |	
+
+
+
+
+# Advanced Algorithms
+## Advanced Arrays
+### Kadane's Algorithm
+
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|     ❌      | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) 🟡 | [Code]() | | [Video]() |
+
 
 # Python Basics
 ## Variables
@@ -624,42 +679,3 @@ Operator	Example		Equivalent to
 |---------|----------|-----------|-----------|-------|
 | 4.1     | []() () ⚫ (Unknown) | [Code]() | | |
 | 4.7     | [50. Pow(x, n)](https://leetcode.com/problems/powx-n/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Primitive%20Types/Medium/Pow(x%2Cn).py) | 🟥 | RECURSION ➡️ Not solved, but it is in the hackathon time frame. Did not solve it using bitwise operators. No clue how. Information is not all included in this question |
-
-
-# Algorithms and Data Structures for Beginners
-## Arrays
-### RAM
-Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
-RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
-Increment the address by the size of the value.
-
-### Static Arrays
-Static arrays are fixed size arrays. Python doesnt offer static, it has dynamic arrays as default. 
-Inserting at the end is efficient, but adding at the front or the middle, is not efficient at all. We must shift all of the values to the right. If we add a the front, this is a O(n) time complexity because we are shifting all of the elements to the right.
-
-| Operation 		| Time Complexity |
-|-----------------------|:---------------:|
-| r/w i-th element 	| O(1)  	  |
-| Insert/Remove end 	| O(1) 		  |
-| Insert middle 	| O(n) 		  |	
-| Remove middle		| O(n) 		  |
-
-### Dynamic Arrays
-Dynamic arrays resize themselves when more space is requested, for example if we wish to add to the end middle or beginning of the array, but we do not have enough space in the current array.
-
-| Operation 		| Time Complexity |
-|-----------------------|:---------------:|
-| r/w i-th element 	| O(1)  	  |
-| Insert/Remove end 	| O(1) 		  |
-| Insert middle 	| O(n) 		  |	
-| Remove middle		| O(n) 		  | 
-
-### Stacks
-The stack is nothing put an array. LIFO - last in, first out data structure. 
-
-| Operation 		| Time Complexity |
-|-----------------------|:---------------:|
-| Push			| O(1)  	  |
-| Pop		 	| O(1) 		  |
-| Peek/Top	 	| O(1) 		  |	
-
