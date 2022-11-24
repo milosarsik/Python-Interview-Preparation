@@ -47,11 +47,11 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Strings Syntax](#strings-syntax)
 		* [Strings Problems](#strings-problems)
 	* [Linked Lists](#linked-lists)
-		* [Linked Lists Implementation](#linked-lists-implementation)
+		* [Linked Lists Implementations](#linked-lists-implementations)
 		* [Linked Lists Problems](#linked-lists-problems)
 	* [Stacks and Queues](#stacks-and-queues)
-		* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
-		* [Queues Implementation](#queues-implementation)
+		* [Stack Implementation](#stack-implementation)
+		* [Queue Implementation](#queue-implementation)
 		* [Stacks and Queues Problems](#stacks-and-queues-problems)
 	* [Binary Trees](#binary-trees)
 		* [Binary Trees Syntax](#binary-trees-syntax)
@@ -578,7 +578,7 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 
 
 ## Linked Lists
-### Linked Lists Implementation
+### Linked Lists Implementations
 In a **Singly Linked List** implementation, each node only points to one other node ahead of it. Below is the implementation of a linked list:
 ```python
 class ListNode:
@@ -695,7 +695,6 @@ class LinkedList:
 
 
 ## Stacks and Queues
-### Stacks and Queues Syntax
 ### Stack Implementation
 ```python
 # Implementing a stack is trivial using a dynamic array
