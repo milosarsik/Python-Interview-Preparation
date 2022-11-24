@@ -51,6 +51,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Linked Lists Problems](#linked-lists-problems)
 	* [Stacks and Queues](#stacks-and-queues)
 		* [Stacks and Queues Syntax](#stacks-and-queues-syntax)
+		* [Queues Implementation](#queues-implementation)
 		* [Stacks and Queues Problems](#stacks-and-queues-problems)
 	* [Binary Trees](#binary-trees)
 		* [Binary Trees Syntax](#binary-trees-syntax)
@@ -134,14 +135,18 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
-|      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
+|     ❌      | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) 🟡 | [Add Code]() | | [Add Video]() |
+|     ❌      | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) 🟡 | [Add Code]() | | [Add Video]() |
+
 
 ### Queues
+...
 
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
-|      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
+|     ❌      | []() 🟡 | [Add Code]() | | [Add Video]() |
+|     ❌      | []() 🟡 | [Add Code]() | | [Add Video]() |
 
 
 
@@ -691,20 +696,60 @@ class LinkedList:
 
 ## Stacks and Queues
 ### Stacks and Queues Syntax
+### Stack Implementation
 ```python
-# Can be used as a stack
-arr.append(4)
-arr.append(5)
-print(arr)
->>> [1, 2, 3, 4, 5]
+# Implementing a stack is trivial using a dynamic array
+class Stack:
+    def __init__(self):
+        self.stack = []
 
-arr.pop()
-print(arr)
->>> [1, 2, 3, 4]
+    def push(self, n):
+        self.stack.append(n)
 
-arr.insert(1, 7)
-print(arr)
->>> [1, 7, 2, 3, 4]
+    def pop(self):
+        return self.stack.pop()
+```
+### Queue Implementation 
+```python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+class Queue:
+    # Implementing this with dummy nodes would be easier!
+    def __init__(self):
+        self.left = self.right = None
+    
+    def enqueue(self, val):
+        newNode = ListNode(val)
+
+        # Queue is non-empty
+        if self.right:
+            self.right.next = newNode
+            self.right = self.right.next
+        # Queue is empty
+        else:
+            self.left = self.right = newNode
+
+    def dequeue(self):
+        # Queue is empty
+        if not self.left:
+            return None
+        
+        # Remove left node and return value
+        val = self.left.val
+        self.left = self.left.next
+        if not self.left:
+            self.right = None
+        return val
+
+    def print(self):
+        cur = self.left
+        while cur:
+            print(cur.val, ' -> ', end ="")
+            cur = cur.next
+        print() # new line
 ```
 
 ### Stacks and Queues Problems
