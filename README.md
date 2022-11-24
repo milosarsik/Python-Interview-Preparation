@@ -63,7 +63,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Primitive Types Problems](#primitive-types-problems)
 
 # Algorithms and Data Structures for Beginners
-## Arrays .
+## Arrays ()
 ### RAM
 Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
 RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
@@ -89,7 +89,7 @@ Inserting at the end is efficient, but adding at the front or the middle, is not
 ### Dynamic Arrays
 Dynamic arrays resize themselves when more space is requested, for example if we wish to add to the end middle or beginning of the array, but we do not have enough space in the current array.
 
-| Operation 		| Time Complexity |
+| 	Operation 	| Time Complexity |
 |-----------------------|:---------------:|
 | r/w i-th element 	| O(1)  	  |
 | Insert/Remove end 	| O(1) 		  |
@@ -104,7 +104,7 @@ Dynamic arrays resize themselves when more space is requested, for example if we
 ### Stacks
 The stack is nothing put an array. LIFO - last in, first out data structure. 
 
-| Operation 		| Time Complexity |
+| 	Operation 	| Time Complexity |
 |-----------------------|:---------------:|
 | Push			| O(1)  	  |
 | Pop		 	| O(1) 		  |
@@ -116,6 +116,34 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 |      ✔️      | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=WTzjTskDFMg&ab_channel=NeetCode) |
 |      ✔️      | [155. Min Stack](https://leetcode.com/problems/min-stack/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=qkLl7nAwDPo&ab_channel=NeetCode) |
 |      ✔️      | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Id_tqGdsZQI&ab_channel=NeetCode) |
+
+## Linked Lists
+### Singly Linked Lists
+...
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=XIdigk956u0&ab_channel=NeetCode) |
+|      ✔️      | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=G0_I-ZF0S38&ab_channel=NeetCode) |
+
+
+### Doubly Linked Lists
+...
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
+
+### Queues
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
+
+
 
 # Advanced Algorithms
 ## Advanced Arrays
@@ -581,6 +609,58 @@ class LinkedList:
         curr = self.head.next
         while curr:
             print(curr.val, " -> ", end="")
+            curr = curr.next
+        print()
+```
+
+In a **Doubly Linked List** implementation, each node points to the next node and the previous node. Below is the implementation of a duobly linked list:
+```python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+        self.prev = None
+
+# Implementation for Doubly Linked List
+class LinkedList:
+    def __init__(self):
+        # Init the list with 'dummy' head and tail nodes which makes 
+        # edge cases for insert & remove easier.
+        self.head = ListNode(-1)
+        self.tail = ListNode(-1)
+        self.head.next = self.tail
+        self.tail.prev = self.head
+    
+    def insertFront(self, val):
+        newNode = ListNode(val)
+        newNode.prev = self.head
+        newNode.next = self.head.next
+
+        self.head.next.prev = newNode
+        self.head.next = newNode
+
+    def insertEnd(self, val):
+        newNode = ListNode(val)
+        newNode.next = self.tail
+        newNode.prev = self.tail.prev
+
+        self.tail.prev.next = newNode
+        self.tail.prev = newNode
+
+    # Remove first node after dummy head (assume it exists)
+    def removeFront(self):
+        self.head.next.next.prev = self.head
+        self.head.next = self.head.next.next
+
+    # Remove last node before dummy tail (assume it exists)
+    def removeEnd(self):
+        self.tail.prev.prev.next = self.tail
+        self.tail.prev = self.tail.prev.prev
+
+    def print(self):
+        curr = self.head.next
+        while curr != self.tail:
+            print(curr.val, " -> ")
             curr = curr.next
         print()
 ```
