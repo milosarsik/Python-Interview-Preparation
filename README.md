@@ -145,8 +145,8 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
-|     ❌      | []() 🟡 | [Add Code]() | | [Add Video]() |
-|     ❌      | []() 🟡 | [Add Code]() | | [Add Video]() |
+|     ❌      | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=rW4vm0-DLYc&ab_channel=NeetCode) |
+|     ❌      | [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) 🟢 | [Add Code]() | | [Add Video]() |
 
 
 
