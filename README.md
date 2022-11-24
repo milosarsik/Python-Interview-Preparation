@@ -317,60 +317,115 @@ for i in range(5, 1, -1):
 If you wish you wish to know more about Pythons control flow, visit the documentation page [here](https://docs.python.org/3/tutorial/controlflow.html)
 
 
+
+
+
 # Elements of Programming Interviews in Python
-
 ## Arrays
+
+Array problems often have simple brute force solutions that use O(n) space, but there are subtler solutions that use the array itself to reduce space complexity to O(1).
+Filling an array from the front is slow, so see if it's possible to write values from the back.
+Instead of deleting an entry (which requires moving all entries to its left), consider overwriting it.
+When dealing with integers encoded by an array consider processing the digits from the backof the array. Alternately, reverse the array so the least-significant digit is the first entry.
+Be comfortable with writing code that operates on subarrays
+It's incredibly easy to make off-by-l errors when operating on arrays-reading past the last element of an array is a comrnon error which has catastrophic consequences.
+Don't worry about preserving the integrity of the array (sortedness, keeping equal entries together, etc.) until it is time to return.
+An array can serve as a good data structure when you know the distribution of the elements inadvance. For example, a Boolean array of length W is a good choice for representing a subset of {0, 1, ..., W - 1}. (When using a Boolean array to represent a subset of {1,2,3, ...,n|, allocate an array of size n+1 to simplify indexing).
+When operating on 2D arrays, use parallel logic for rows and for columns.
+Sometimes it's easier to simulate the specification, than to analytically solve for the result. For example, rather than writing a formula for the i-th entry in the spiral order for an n x n matrix, just compute the output from the beginning.
+
+### Arrays Syntax
+#### Instantiation
 ```python
-# Arrays (called lists in python)
-arr = [1, 2, 3]
-print(arr)
->>> [1, 2, 3]
+list = [1, 2, 3, 4, 5]
 
+print(list)
+>>> [1, 2, 3, 4, 5]
 
-arr[0] = 0
-arr[3] = 0
-print(arr)
->>> [0, 7, 2, 0, 4]
-
-# Initialize arr of size n with default value of 1
+# Initialize a list of size n with default value of 1
 n = 5
-arr = [1] * n
-print(arr)
+list = [1] * n
+
+print(list)
 >>> [1, 1, 1, 1, 1]
-print(len(arr))
+
+print(len(list))
 >>> 5
 
+list = [i for i in range(5)]
+
+print(list)
+>>> [0, 1, 2, 3, 4]
+```
+
+#### Indexing
+```python
+list[0] = 0
+list[3] = 0
+print(list)
+>>> [0, 2, 3, 0, 5]
+
 # Careful: -1 is not out of bounds, it's the last value
-arr = [1, 2, 3]
-print(arr[-1])
+list = [1, 2, 3]
+
+print(list[-1])
 >>> 3
 
-# Indexing -2 is the second to last value, etc.
 print(arr[-2])
 >>> 2
+```
 
-# Sublists (aka slicing)
+#### Slicing
+If we have `A = [1, 6, 3, 4, 5, 2, 77]`, these are the following slicing operations we can perform. <br/>
+* `A[2:4]` is [3, 4]
+* `A[2:]` is [3, 4, 5, 2, 77] 
+* `A[:4]` is [1, 6, 3, 4] 
+* `A[:-1]` is [1, 6, 3, 4, 5, 2] 
+* `A[-3:]` is [5, 2, 7] 
+* `A[-3:-1]` is [5, 2] 
+* `A[1:5:2]` is [6, 4] 
+* `A[5:1:-2]` is [2, 4]
+* `A[::-1]` is [7, 2, 5, 4, 3, 6, 1] (reverses list) 
+
+Slicing can also be used to rotate a list `A[k:l] + A[:k]` rotates A by k to the left. It can also be used to create a copy: `B = A[:]` does a (shallow) copy of A into B.
+```python
 arr = [1, 2, 3, 4]
 print(arr[1:3])
 >>> [2, 3]
 
-# Similar to for-loop ranges, last index is non-inclusive
+# Similar to for-loop ranges, last index is non-inclusive, but no out of bounds error
 print(arr[0:4])
 >>> [1, 2, 3, 4]
 
-# But no out of bounds error
 print(arr[0:10])
 >>> [1, 2, 3, 4]
+```
 
-# Unpacking
-a, b, c = [1, 2, 3]
-print(a, b, c)
->>> 1, 2, 3
+#### Basic Operations
+```python
+len(list)
+list.append(42)
+list.remove(42)
+list.insert(3, 28)
+list.reverse()
+list.sort()
+list.sort(reverse=True)
 
-# Be careful though, this throws an error
-a, b = [1, 2, 3]
+list = ["bob", "alice", "jane", "doe"]
+list.sort()
 
-# Looping through arrays
+print(list)
+>>> ["alice", "bob", "doe", "jane"]
+
+# Custom sort (by length of string)
+list.sort(key=lambda x: len(x))
+
+print(list)
+>>> ["bob", "doe", "jane", "alice"]
+```
+
+#### Looping Through Array
+```python
 nums = [1, 2, 3]
 
 # Using index
@@ -398,42 +453,13 @@ for n1, n2 in zip(nums1, nums2):
 >>> 1 2
 >>> 3 4
 >>> 5 6
+```
 
-# Reverse
-nums = [1, 2, 3]
-nums.reverse()
-print(nums)
->>> [3, 2, 1]
+#### 2-D Lists
+```python
+list = [[0] * 4 for i in range(4)]
 
-
-# Sorting
-arr = [5, 4, 7, 3, 8]
-arr.sort()
-print(arr)
->>> [3, 4, 5, 7, 8]
-
-arr.sort(reverse=True)
-print(arr)
->>> [8, 7, 5, 4, 3]
-
-arr = ["bob", "alice", "jane", "doe"]
-arr.sort()
-print(arr)
->>> ["alice", "bob", "doe", "jane"]
-
-# Custom sort (by length of string)
-arr.sort(key=lambda x: len(x))
-print(arr)
->>> ["bob", "doe", "jane", "alice"]
-
-# List comprehension
-arr = [i for i in range(5)]
-print(arr)
->>> [0, 1, 2, 3, 4]
-
-# 2-D lists
-arr = [[0] * 4 for i in range(4)]
-print(arr)
+print(list)
 print(arr[0][0], arr[3][3])
 >>> [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 
@@ -441,45 +467,21 @@ print(arr[0][0], arr[3][3])
 arr = [[0] * 4] * 4
 ```
 
-Array problems often have simple brute force solutions that use O(n) space, but there are subtler solutions that use the array itself to reduce space complexity to O(1).
-Filling an array from the front is slow, so see if it's possible to write values from the back.
-Instead of deleting an entry (which requires moving all entries to its left), consider overwriting it.
-When dealing with integers encoded by an array consider processing the digits from the backof the array. Alternately, reverse the array so the least-significant digit is the first entry.
-Be comfortable with writing code that operates on subarrays
-It's incredibly easy to make off-by-l errors when operating on arrays-reading past the last element of an array is a comrnon error which has catastrophic consequences.
-Don't worry about preserving the integrity of the array (sortedness, keeping equal entries together, etc.) until it is time to return.
-An array can serve as a good data structure when you know the distribution of the elements inadvance. For example, a Boolean array of length W is a good choice for representing a subset of {0, 1, ..., W - 1}. (When using a Boolean array to represent a subset of {1,2,3, ...,n|, allocate an array of size n+1 to simplify indexing).
-When operating on 2D arrays, use parallel logic for rows and for columns.
-Sometimes it's easier to simulate the specification, than to analytically solve for the result. For example, rather than writing a formula for the i-th entry in the spiral order for an n x n matrix, just compute the output from the beginning.
-
-### Arrays Syntax
-#### Instantiation
-```
-list = [1,2,3,4,5]
-list = [1] + [0] * 10
-list(range(100))
-```
-#### Basic Operations
-```
-len(list)
-list.append(42)
-list.remove(42)
-list.insert(3, 28)
-```
 #### Value Exists
-```
+```python
 a in list
 ```
+
 #### Copying (Shallow & Deep)
-```
+```python
 listB = listA
 ```
 This will make listB point to listA. They will have the same values.
-##### Shallow Copy
-A shallow copy creates a new object which stores the reference of the original elements.
 
+##### Shallow Copy
+A shallow copy creates a new object which stores the reference of the original elements. <br/>
 So, a shallow copy doesn't create a copy of nested objects, instead it just copies the reference of nested objects. This means, a copy process does not recurse or create copies of nested objects itself.
-```
+```python
 import copy
 
 old_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -489,9 +491,10 @@ print("Old list:", old_list)
 print("New list:", new_list)
 ```
 Changes in the old_list, will appear in the new_list. Changes in the new_list will not appear in the old_list.
+
 ##### Deep Copy
 A deep copy creates a new object and recursively adds the copies of nested objects present in the original elements.
-```
+```python
 import copy
 
 old_list = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
@@ -501,27 +504,44 @@ print("Old list:", old_list)
 print("New list:", new_list)
 ```
 In the above program, we use deepcopy() function to create copy which looks similar. However, if you make changes to any nested objects in original object old_list, you’ll see no changes to the copy new_list.
-#### Key Methods
-Key methods for list include `min(A)`, `max(A)`, binary search for sorted lists (`bisect.bisect(A,6)`, `bisect.bisect-left(A,6)`, and `bisect.bisect_right(A,6)`), `A.reverse()` (in-place), `reversed(A)` (returns an iterator), `A.sort()` (in-place), `sorted(A)` (returns a copy), `del A[i]` (deletes the i-th element), `and del A[i: j]` (removes the slice)
-#### Slicing
-`A = [1, 6, 3, 4, 5, 2, 77]`. Here are some examples of slicing: `A[2:4]` is [3, 4], `A[2:]` is [3, 4, 5, 2, 77], `A[:4]` is [1, 6, 3, 4], `A[:-1]` is [1, 6, 3, 4, 5, 2], `A[-3:]` is [5, 2, 7], `A[-3:-1]` is [5, 2], `A[1:5:2]` is [6, 4], `A[5:1:-2]` is [2, 4], and `A[::-1]` is [7, 2, 5, 4, 3, 6, 1] (reverses list). Slicing can also be used to rotate a list `A[k:l] + A[:k]` rotates A by k to the left. It can also be used to create a copy: `B = A[:]` does a (shallow) copy of A into B.
-#### List Comprehension
-Python provides a feature called list comprehension that is a succinct way to create lists. A list comprehension consists of (1.) an input sequence, (2.) an iterator over the input sequence, (3.) a logical condition over the iterator (this is optional), and (4.) an expression that yieldsthe elements of the derived list. For example, `[x**2 for x in range(6)]` yields [0, 1, 4, 9, 16, 25],and `[x**2 for x in range(6) if x%2 == 0]` yields [0, 4, 16].
 
-List comprehension supports multiple levels of looping. This can be used to create the product of sets, e.g., if A = [1, 3, 5] and B = ['d', 'b'], then `[(x, y) for x in A for y in B]` creates [(1, 'a'), (1, 'b'), (3, 'a'), (3, 'b'), (5, 'a'), (5, 'b')]. It can also be used to convert a 2D list to a lD list, e.g., if M = [['a', 'b', 'c'], ['d', 'e',
-'f']], x for row in M for x in row creates ['a', 'b', 'c', 'd', 'e', 'f ']. Two levels of looping also allow for iterating over each entry in a 2D list, e.g., lf A = [[1, 2, 3] , [4, 5, 6]] then `[[x**2 for x in row] for row in M]` yields [[1, 4, 9], [16, 25, 36]].
+#### Key Methods
+* `min(A)`, 
+* `max(A)`, 
+* binary search for sorted lists (`bisect.bisect(A,6)`, `bisect.bisect-left(A,6)`, and `bisect.bisect_right(A,6)`), 
+* `A.reverse()` (in-place)
+* `reversed(A)` (returns an iterator), 
+* `A.sort()` (in-place), 
+* `sorted(A)` (returns a copy), 
+* `del A[i]` (deletes the i-th element), `and 
+* del A[i: j]` (removes the slice)
+
+#### List Comprehension
+Python provides a feature called list comprehension that is a succinct way to create lists. A list comprehension consists of:
+1. an input sequence 
+2. an iterator over the input sequence
+3. a logical condition over the iterator (this is optional)
+4. an expression that yields the elements of the derived list. 
+
+`[x**2 for x in range(6)]` yields `[0, 1, 4, 9, 16, 25]` <br/>
+`[x**2 for x in range(6) if x%2 == 0]` yields `[0, 4, 16]` <br/>
+
+List comprehension supports multiple levels of looping. This can be used to create the product of sets, e.g., if `A = [1, 3, 5]` and `B = ['d', 'b']`, then `[(x, y) for x in A for y in B]` creates `[(1, 'a'), (1, 'b'), (3, 'a'), (3, 'b'), (5, 'a'), (5, 'b')]`. <br/>
+
+It can also be used to convert a 2D list to a 1D list, e.g., if M = [['a', 'b', 'c'], ['d', 'e','f']], `x for row in M for x in row` creates `['a', 'b', 'c', 'd', 'e', 'f ']`. <br/>
+Two levels of looping also allow for iterating over each entry in a 2D list, e.g., lf A = [[1, 2, 3] , [4, 5, 6]] then `[[x**2 for x in row] for row in M]` yields [[1, 4, 9], [16, 25, 36]]. <br/>
 
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
 
 ### Arrays Problems
 |  Problem  | LeetCode |  Solution   |  Completed  | Notes |  Video Walkthrough  | 
 |:---------:|----------|:-----------:|:-----------:|-------|:-------------------:|
-| 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SortColors.py) | ✔️ | PARTITION/PIVOT POINT ➡️ Instantiate a left and right pointer and a pivot point i. While i <= r, if nums[i] is zero do a swap with the left and the pivot point, if nums[i] is 2 do a swap with the right and pivot point, but do not increment the pivot point (that is why we decrement the pivot point in the if statment). Simply put we are breaking up the array into 3 section, 0, 1 and 2. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)
+| 5.1     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SortColors.py) | ✔️ | PARTITION/PIVOT POINT ➡️ Instantiate a left and right pointer and a pivot point i. While i <= r, if nums[i] is zero do a swap with the left and the pivot point, if nums[i] is 2 do a swap with the right and pivot point, but do not increment the pivot point (that is why we decrement the pivot point in the if statment). Simply put we are breaking up the array into 3 section, 0, 1 and 2. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1)
 | 5.2     | []() | | &#9744; | |
 | 5.3     | []() | | &#9744; | |
 | 5.4     | [55. Jump Game](https://leetcode.com/problems/jump-game/) | | &#9744; | |
 | 5.5     | [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | | &#9744; | |
-| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/121.%20BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | Use a sliding window technique, have a left and right pointer beginning next to eachother. Window size depends on if right is less than left. Keep track of the maximum profit. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=1pkOgXD63yU&ab_channel=NeetCode) |
+| 5.6     | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/121.%20BestTimeToBuyAndSellStock.py) | :heavy_check_mark: | Use a sliding window technique, have a left and right pointer beginning next to eachother. Window size depends on if right is less than left. Keep track of the maximum profit. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=1pkOgXD63yU&ab_channel=NeetCode) |
 | 5.7	  | [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | | &#9744; | |
 | 5.8     | [280. Wiggle Sort](https://leetcode.com/problems/wiggle-sort) | | &#9744; | |
 | 5.9     | [204. Count Primes](https://leetcode.com/problems/count-primes) note: book asks to return a list of the primes | | &#9744; | |
@@ -533,21 +553,21 @@ As a general rule, it is best to avoid more than two nested comprehensions, and 
 | 5.15    | []() | | &#9744; | |
 | 5.16    | []() | | &#9744; | |
 | 5.17    | [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | | &#9744; | |
-| 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SpiralMatrix.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame. |
+| 5.18    | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SpiralMatrix.py) | 🟥 | X ➡️ Not solved, but it is in the hackathon time frame. |
 | 5.19    | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | | &#9744; | |
 | 5.20    | [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | | &#9744; | |
-| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/1.%20TwoSum.py) | :heavy_check_mark: | Use a **hashmap** data structure to keep track of the value and indice. Calculate the complement and check if it exists in the **hashmap**. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=KLlXCFG5TnA&ab_channel=NeetCode) |
-| BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
-| BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
-| NC.io   | [27. Remove Element](https://leetcode.com/problems/remove-element/) (Easy) 🟢 | [Code](//) | :heavy_check_mark: | Max <br/>Time Complexity: //<br/>Space Complexity: // |
-| BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
-| BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | Max <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
-| BLIND   | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/125.%20ValidPalindrome.py) | :heavy_check_mark: | Use **left and right pointer** technique. Update left and right until each one points at an alphanum. A global while loop is needed to ensure that the two pointers do not cross. Then compare left and right, continue until left >= right. There are upper and lower case letters, therefore use a **.lower()** method to take care of that. There are two more solutions to this problem in the code. Make sure to make your own alphanum function, or write an algorithm using built-in methods. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=jJXJ16kPFWg&ab_channel=NeetCode) |
-| BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
-| BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
-| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/217.%20ContainsDuplicate.py) | :heavy_check_mark: | Use a **set()** data structure to solve this problem. It is a built-in data type in Python used to store collections of data. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=3OamzN90kPg&t=342s&ab_channel=NeetCode)|
-| BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) (Medium) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | ARRAY ➡️ Instantiate a result array with 1s, it will be the length of the given array. Start from the beginning of res and calculate the prefix (set to 1), set the res with the calculated prefix (prefix multiplied by nums[i]). Start from the end of res and calculate the postfix (set to 1, calculated by postfix multiplied by nums[i]), the res will be given as res multiplied by the postfix. Return the res array. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) if output array doesn't count as memory |
-| BLIND   | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) (Easy) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/242.%20ValidAnagram.py) | ✔️ | Use the **hashmap** data structure to count each character in both strings, then compare the lengths of each element, or just compare the hashmaps. One liner solution is to sort the strings and compare, or use a **Counter()** and then compare. Go to the code to view the time and space complexities. | [Video](https://www.youtube.com/watch?v=9UtInBqnCgA&ab_channel=NeetCode) |
+| BLIND   | [1. Two Sum](https://leetcode.com/problems/two-sum/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/1.%20TwoSum.py) | :heavy_check_mark: | Use a **hashmap** data structure to keep track of the value and indice. Calculate the complement and check if it exists in the **hashmap**. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=KLlXCFG5TnA&ab_channel=NeetCode) |
+| BLIND   | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ContainerWithMostWater.py) | :heavy_check_mark: | |
+| BLIND   | [15. 3Sum](https://leetcode.com/problems/3sum/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/3Sum.py) | :heavy_check_mark: | |
+| NC.io   | [27. Remove Element](https://leetcode.com/problems/remove-element/) 🟢 | [Code](//) | :heavy_check_mark: | Max <br/>Time Complexity: //<br/>Space Complexity: // |
+| BLIND   | [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/SearchInRotatedSortedArray.py) | :heavy_check_mark: | |
+| BLIND   | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/MaximumSubarray.py) | :heavy_check_mark: | Max <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) |
+| BLIND   | [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/125.%20ValidPalindrome.py) | :heavy_check_mark: | Use **left and right pointer** technique. Update left and right until each one points at an alphanum. A global while loop is needed to ensure that the two pointers do not cross. Then compare left and right, continue until left >= right. There are upper and lower case letters, therefore use a **.lower()** method to take care of that. There are two more solutions to this problem in the code. Make sure to make your own alphanum function, or write an algorithm using built-in methods. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=jJXJ16kPFWg&ab_channel=NeetCode) |
+| BLIND   | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/MaximumProductSubarray.py) | :heavy_check_mark: | |
+| BLIND   | [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/FindMinimumInRotatedSortedArray.py) | :heavy_check_mark: | |
+| BLIND   | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/217.%20ContainsDuplicate.py) | :heavy_check_mark: | Use a **set()** data structure to solve this problem. It is a built-in data type in Python used to store collections of data. <br/>Time Complexity: O(n)<br/>Space Complexity: O(n) | [Video](https://www.youtube.com/watch?v=3OamzN90kPg&t=342s&ab_channel=NeetCode)|
+| BLIND   | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Medium/ProductOfArrayExceptSelf.py) | :heavy_check_mark: | ARRAY ➡️ Instantiate a result array with 1s, it will be the length of the given array. Start from the beginning of res and calculate the prefix (set to 1), set the res with the calculated prefix (prefix multiplied by nums[i]). Start from the end of res and calculate the postfix (set to 1, calculated by postfix multiplied by nums[i]), the res will be given as res multiplied by the postfix. Return the res array. <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) if output array doesn't count as memory |
+| BLIND   | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/) 🟢 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Arrays/Easy/242.%20ValidAnagram.py) | ✔️ | Use the **hashmap** data structure to count each character in both strings, then compare the lengths of each element, or just compare the hashmaps. One liner solution is to sort the strings and compare, or use a **Counter()** and then compare. Go to the code to view the time and space complexities. | [Video](https://www.youtube.com/watch?v=9UtInBqnCgA&ab_channel=NeetCode) |
 
 ## Strings
 ### Strings Syntax
