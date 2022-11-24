@@ -63,7 +63,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Primitive Types Problems](#primitive-types-problems)
 
 # Algorithms and Data Structures for Beginners
-## Arrays
+## Arrays .
 ### RAM
 Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
 RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
@@ -73,12 +73,18 @@ Increment the address by the size of the value.
 Static arrays are fixed size arrays. Python doesnt offer static, it has dynamic arrays as default. 
 Inserting at the end is efficient, but adding at the front or the middle, is not efficient at all. We must shift all of the values to the right. If we add a the front, this is a O(n) time complexity because we are shifting all of the elements to the right.
 
-| Operation 		| Time Complexity |
+| 	Operation 	| Time Complexity |
 |-----------------------|:---------------:|
 | r/w i-th element 	| O(1)  	  |
 | Insert/Remove end 	| O(1) 		  |
 | Insert middle 	| O(n) 		  |	
 | Remove middle		| O(n) 		  |
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=DEJAZBq0FDA&t=1s&ab_channel=NeetCode) |
+|      ✔️      | [27. Remove Element](https://leetcode.com/problems/remove-element/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Pcd1ii9P9ZI&ab_channel=NeetCode) |
 
 ### Dynamic Arrays
 Dynamic arrays resize themselves when more space is requested, for example if we wish to add to the end middle or beginning of the array, but we do not have enough space in the current array.
@@ -90,6 +96,11 @@ Dynamic arrays resize themselves when more space is requested, for example if we
 | Insert middle 	| O(n) 		  |	
 | Remove middle		| O(n) 		  | 
 
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
+
 ### Stacks
 The stack is nothing put an array. LIFO - last in, first out data structure. 
 
@@ -99,8 +110,12 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 | Pop		 	| O(1) 		  |
 | Peek/Top	 	| O(1) 		  |	
 
-
-
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ✔️      | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=WTzjTskDFMg&ab_channel=NeetCode) |
+|      ✔️      | [155. Min Stack](https://leetcode.com/problems/min-stack/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=qkLl7nAwDPo&ab_channel=NeetCode) |
+|      ✔️      | [682. Baseball Game](https://leetcode.com/problems/baseball-game/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Id_tqGdsZQI&ab_channel=NeetCode) |
 
 # Advanced Algorithms
 ## Advanced Arrays
