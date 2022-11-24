@@ -528,7 +528,8 @@ Python provides a feature called list comprehension that is a succinct way to cr
 
 List comprehension supports multiple levels of looping. This can be used to create the product of sets, e.g., if `A = [1, 3, 5]` and `B = ['d', 'b']`, then `[(x, y) for x in A for y in B]` creates `[(1, 'a'), (1, 'b'), (3, 'a'), (3, 'b'), (5, 'a'), (5, 'b')]`. <br/>
 
-It can also be used to convert a 2D list to a 1D list, e.g., if M = [['a', 'b', 'c'], ['d', 'e','f']], `x for row in M for x in row` creates `['a', 'b', 'c', 'd', 'e', 'f ']`. <br/>
+It can also be used to convert a 2D list to a 1D list, e.g., if `M = [['a', 'b', 'c'], ['d', 'e','f']]`, `x for row in M for x in row` creates `['a', 'b', 'c', 'd', 'e', 'f ']`. <br/>
+
 Two levels of looping also allow for iterating over each entry in a 2D list, e.g., lf A = [[1, 2, 3] , [4, 5, 6]] then `[[x**2 for x in row] for row in M]` yields [[1, 4, 9], [16, 25, 36]]. <br/>
 
 As a general rule, it is best to avoid more than two nested comprehensions, and use conventional nested for loops-the indentation makes it easier to read the program.
