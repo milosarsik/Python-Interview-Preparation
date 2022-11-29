@@ -163,13 +163,63 @@ Queues are similar to stacks. FIFO - first in, first out data structure. Support
 |     ❌      | [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=rW4vm0-DLYc&ab_channel=NeetCode) |
 |     ❌      | [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) 🟢 | [Add Code]() | | [Add Video]() |
 
+## Recursion
+### Factorial
+A factorial, would be a good introduction to recursion. This is called a one-branch recursion. To notice a recursion problem, we have to find if there are sub-problems. The equation for a factorial is as follows: `n! = n * (n - 1)!`. </br>
+There is no benefit to using recursion for a factorial problem. However it gives you a good visualization of how recursion works. Here is the code solution for a factorial and the decision tree:
+```python
+def factorial(n):
+    # Base case: n = 0 or 1
+    if n <= 1:
+        return 1
 
+    # Recursive case: n! = n * (n - 1)!
+    return n * factorial(n - 1)
+    
+5!	
+  \		24	->	120	
+   4!		|-
+     \		6
+      3!	|-
+        \	2
+	 2!	|-
+	   \	1
+	    1!
+```
 
+Recursion is not recommended because we are using O(n) memory, and we can do this in constant memory using a while loop like so:
+```python
+int res = 1
 
+while n < 1:
+    res = res * n
+    n -= 1
+	
+return res
+```
 
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|     ❌      | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=G0_I-ZF0S38&ab_channel=NeetCode) |
 
+### Fibonacci
+This is an example of two-branch recursion. Here is the implementation:
+```python
+def fibonacci(n):
+    # Base case: n = 0 or 1
+    if n <= 1:
+        return n
 
+    # Recursive case: fib(n) = fib(n - 1) + fib(n - 1)
+    return fibonacci(n - 1) + fibonacci(n - 2)
+```
 
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Y0lT9Fck7qI&t=2s&ab_channel=NeetCode) |
+|      ❌     | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) 🟢 | [Add Code]() | | [Video]() |
 
 
 
