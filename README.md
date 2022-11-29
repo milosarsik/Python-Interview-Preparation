@@ -103,13 +103,13 @@ Dynamic arrays resize themselves when more space is requested, for example if we
 |      ✔️      | [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) 🟢 | [Add Code]() | | [Add Video]() |
 
 ### Stacks
-The stack is nothing put an array. LIFO - last in, first out data structure. 
+The stack is nothing but an array. LIFO - last in, first out data structure. 
 
 | 	Operation 	| Time Complexity |
 |-----------------------|:---------------:|
 | Push			| O(1)  	  |
 | Pop		 	| O(1) 		  |
-| Peek/Top	 	| O(1) 		  |	
+| Peek/Top	 	| O(1) 		  |
 
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
@@ -120,7 +120,13 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 
 ## Linked Lists
 ### Singly Linked Lists
-...
+A linked list is made up of a chain of nodes. These nodes contain a value and pointer to the next node. A chain of nodes is called a singly linked list becaue every next pointer points to the address of the next node. 
+
+| 	Operation 	| Time Complexity |
+|-----------------------|:---------------:|
+| r/w i-th element 	| O(n)  	  |
+| Insert/Remove end	| O(1)  	  |
+| Insert/Remove middle	| O(n)/O(1) 	  |
 
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
@@ -128,9 +134,14 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 |      ✔️      | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=XIdigk956u0&ab_channel=NeetCode) |
 |      ✔️      | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=G0_I-ZF0S38&ab_channel=NeetCode) |
 
-
 ### Doubly Linked Lists
-...
+Exact same as singly linked lists but, now a node also stores a refrence to the previous node aswell as the next node. 
+
+| 	Operation 	| Time Complexity |
+|-----------------------|:---------------:|
+| r/w i-th element 	| O(n)  	  |
+| Insert/Remove end	| O(1)  	  |
+| Insert/Remove middle	| O(n)/O(1) 	  |
 
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
@@ -138,9 +149,13 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 |     ❌      | [707. Design Linked List](https://leetcode.com/problems/design-linked-list/) 🟡 | [Add Code]() | | [Add Video]() |
 |     ❌      | [1472. Design Browser History](https://leetcode.com/problems/design-browser-history/) 🟡 | [Add Code]() | | [Add Video]() |
 
-
 ### Queues
-...
+Queues are similar to stacks. FIFO - first in, first out data structure. Supports two operations, enqueue and dequeue. Elements are added from the end and removed from the front.
+
+| 	Operation 	| Time Complexity |
+|-----------------------|:---------------:|
+| Enqueue	 	| O(1)  	  |
+| Dequeue 		| O(1)  	  |
 
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
