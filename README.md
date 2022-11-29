@@ -150,6 +150,39 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Advanced Algorithms
 ## Advanced Arrays
 ### Kadane's Algorithm
@@ -160,6 +193,40 @@ The stack is nothing put an array. LIFO - last in, first out data structure.
 |     ❌      | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) 🟡 | [Code]() | | [Video]() |
 |     ❌      | [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/) 🟡 | [Code]() | | [Video]() |
 |     ❌      | [978. Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) 🟡 | [Code]() | | [Video]() |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Python Basics
