@@ -221,7 +221,184 @@ def fibonacci(n):
 |      ❌     | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Y0lT9Fck7qI&t=2s&ab_channel=NeetCode) |
 |      ❌     | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) 🟢 | [Add Code]() | | [Video]() |
 
+## Sorting
+### Insertion Sort
+```python
+def insertionSort(arr):
+	# Traverse through 1 to len(arr)
+    for i in range(1, len(arr)):
+        j = i - 1
+        while j >= 0 and arr[j + 1] < arr[j]:
+            # arr[j] and arr[j + 1] are out of order so swap them 
+            tmp = arr[j + 1]
+            arr[j + 1] = arr[j]
+            arr[j] = tmp
+            j -= 1
+    return arr
+```
 
+### Merge Sort
+```python
+def mergeSort(arr, s, e):
+    if e - s + 1 <= 1:
+        return arr
+
+    # The middle index of the array
+    m = (s + e) // 2
+
+    # Sort the left half
+    mergeSort(arr, s, m)
+
+    # Sort the right half
+    mergeSort(arr, m + 1, e)
+
+    # Merge sorted halfs
+    merge(arr, s, m, e)
+    
+    return arr
+
+# Merge in-place
+def merge(arr, s, m, e):
+    # Copy the sorted left & right halfs to temp arrays
+    L = arr[s: m + 1]
+    R = arr[m + 1: e + 1]
+
+    i = 0 # index for L
+    j = 0 # index for R
+    k = s # index for arr
+
+    # Merge the two sorted halfs into the original array
+    while i < len(L) and j < len(R):
+        if L[i] <= R[j]:
+            arr[k] = L[i]
+            i += 1
+        else:
+            arr[k] = R[j]
+            j += 1
+        k += 1
+
+    # One of the halfs will have elements remaining
+    while i < len(L):
+        arr[k] = L[i]
+        i += 1
+        k += 1
+    while j < len(R):
+        arr[k] = R[j]
+        j += 1
+        k += 1
+```
+
+### Quick Sort
+```python
+def quickSort(arr, s, e):
+    if e - s + 1 <= 1:
+        return
+
+    pivot = arr[e]
+    left = s # pointer for left side
+
+    # Partition: elements smaller than pivot on left side
+    for i in range(s, e):
+        if arr[i] < pivot:
+            tmp = arr[left]
+            arr[left] = arr[i]
+            arr[i] = tmp
+            left += 1
+
+    # Move pivot in-between left & right sides
+    arr[e] = arr[left]
+    arr[left] = pivot
+    
+    # Quick sort left side
+    quickSort(arr, s, left - 1)
+
+    # Quick sort right side
+    quickSort(arr, left + 1, e)
+
+    return arr
+```
+
+### Bucket Sort
+
+```python
+def bucketSort(arr):
+    # Assuming arr only contains 0, 1 or 2
+    counts = [0, 0, 0]
+
+    # Count the quantity of each val in arr
+    for n in arr:
+        counts[n] += 1
+    
+    # Fill each bucket in the original array
+    i = 0
+    for n in range(len(counts)):
+        for j in range(counts[n]):
+            arr[i] = n
+            i += 1
+    return arr
+```
+
+## Binary Search
+### Search Array
+
+```python
+arr = [1, 3, 3, 4, 5, 6, 7, 8]
+
+def binarySearch(arr, target):
+    L, R = 0, len(arr) - 1
+
+    while L <= R:
+        M = (L + R) // 2
+
+        if target > arr[M]:
+            L = M + 1
+        elif target < arr[M]:
+            R = M - 1
+        else:
+            return M
+    return -1
+```
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Ber2pi2C0j0&ab_channel=NeetCode) |
+|      ❌     | [704. Binary Search](https://leetcode.com/problems/binary-search) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=s4DPM8ct1pI&ab_channel=NeetCode) |
+
+### Search Range
+
+```python
+# low = 1, high = 100
+
+# Binary search on some range of values
+def binarySearch(low, high):
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if isCorrect(mid) > 0:
+            high = mid - 1
+        elif isCorrect(mid) < 0:
+            low = mid + 1
+        else:
+            return mid
+    return -1
+
+# Return 1 if n is too big, -1 if too small, 0 if correct
+def isCorrect(n):
+    if n > 10:
+        return 1
+    elif n < 10:
+        return -1
+    else:
+        return 0
+```
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=xW4QsTtaCa4&ab_channel=NeetCode) |
+|      ❌     | [704. Binary Search](https://leetcode.com/problems/binary-search) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=s4DPM8ct1pI&ab_channel=NeetCode) |
 
 
 
