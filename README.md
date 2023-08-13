@@ -237,6 +237,12 @@ def insertionSort(arr):
     return arr
 ```
 
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|     ❌      | [912. Sort an Array](https://leetcode.com/problems/sort-an-array/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=MsYZSinhuFo&ab_channel=NeetCodeIO) |
+
+
 ### Merge Sort
 ```python
 def mergeSort(arr, s, e):
@@ -287,6 +293,12 @@ def merge(arr, s, m, e):
         j += 1
         k += 1
 ```
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Y0lT9Fck7qI&t=2s&ab_channel=NeetCode) |
+|      ❌     | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) 🟢 | [Add Code]() | | [Video]() |
 
 ### Quick Sort
 ```python
