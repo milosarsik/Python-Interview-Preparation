@@ -64,7 +64,7 @@ This is a repository to store all of the solutions to every Python interview que
 		* [Primitive Types Problems](#primitive-types-problems)
 
 # Algorithms and Data Structures for Beginners
-## Arrays ()
+## Arrays
 ### RAM
 Ram is measured in bytes. Byte is 8 bits. A bit is the position that can store a digit, the restriction is that it can be a zero or a one. 
 RAM stores the values, but every value is stored at a distint location called an address. Arrays are going to be contiguous, meaning that the values stored in RAM are going to be next to eachother. THe address will increment by 4 because intergers are 4 bytes. However, if we store ASCII values, they will increment by 1, because it is 1 byte.
