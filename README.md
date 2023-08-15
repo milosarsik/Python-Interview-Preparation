@@ -420,23 +420,8 @@ def isCorrect(n):
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
 |      ❌     | [374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=xW4QsTtaCa4&ab_channel=NeetCode) |
-|      ❌     | [704. Binary Search](https://leetcode.com/problems/binary-search) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=s4DPM8ct1pI&ab_channel=NeetCode) |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|      ❌     | [278. First Bad Version](https://leetcode.com/problems/first-bad-version/) 🟢 | [Add Code]() | | [Add Video]() |
+|      ❌     | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=U2SozAs9RzA&ab_channel=NeetCode) |
 
 
 
@@ -457,32 +442,6 @@ def isCorrect(n):
 |     ❌      | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) 🟡 | [Code]() | | [Video]() |
 |     ❌      | [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/) 🟡 | [Code]() | | [Video]() |
 |     ❌      | [978. Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) 🟡 | [Code]() | | [Video]() |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
