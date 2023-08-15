@@ -242,7 +242,6 @@ def insertionSort(arr):
 |:-----------:|---------|:-----------:|-------|:-------------------:|
 |     ❌      | [912. Sort an Array](https://leetcode.com/problems/sort-an-array/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=MsYZSinhuFo&ab_channel=NeetCodeIO) |
 
-
 ### Merge Sort
 ```python
 def mergeSort(arr, s, e):
@@ -297,8 +296,8 @@ def merge(arr, s, m, e):
 #### Suggested Problems
 |  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
 |:-----------:|---------|:-----------:|-------|:-------------------:|
-|      ❌     | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) 🟢 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=Y0lT9Fck7qI&t=2s&ab_channel=NeetCode) |
-|      ❌     | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) 🟢 | [Add Code]() | | [Video]() |
+|      ❌     | [912. Sort an Array](https://leetcode.com/problems/sort-an-array/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=MsYZSinhuFo&ab_channel=NeetCodeIO) |
+|      ❌     | [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) 🔴 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=q5a5OiGbT6Q&ab_channel=NeetCode) |
 
 ### Quick Sort
 ```python
@@ -330,6 +329,12 @@ def quickSort(arr, s, e):
     return arr
 ```
 
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [912. Sort an Array](https://leetcode.com/problems/sort-an-array/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=MsYZSinhuFo&ab_channel=NeetCodeIO) |
+|      ❌     | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=XEmy13g1Qxc&ab_channel=NeetCode) |
+
 ### Bucket Sort
 
 ```python
@@ -349,6 +354,11 @@ def bucketSort(arr):
             i += 1
     return arr
 ```
+
+#### Suggested Problems
+|  Completed  | Problem |  Solution   | Notes |  Video Walkthrough  | 
+|:-----------:|---------|:-----------:|-------|:-------------------:|
+|      ❌     | [75. Sort Colors](https://leetcode.com/problems/sort-colors/) 🟡 | [Add Code]() | | [Video](https://www.youtube.com/watch?v=4xbWSRZHqac&ab_channel=NeetCode) |
 
 ## Binary Search
 ### Search Array
