@@ -7,6 +7,7 @@ Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be val
 Each row must contain the digits 1-9 without repetition.
 Each column must contain the digits 1-9 without repetition.
 Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+
 Note:
 
 A Sudoku board (partially filled) could be valid but is not necessarily solvable.
@@ -44,10 +45,14 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Solution Walkthrough
 
-
+In short we want to use a HashSet for the rows, columns and squares. For row and col, the key is the 
+row/col and the value is a set. We iterate through the arrays, adding the values to the HashSet, the 
+key is (row,col), and if we come across a value that is in the HashSet, we return false. The tricky 
+part of this question, is figuring out which square the value is apart of. It is easier than
+we think. We simply take the row and col value, and divde it by 3 so that it is mapped correctly.  
 
 Time complexity: O(n). We are passing once.
-Space complexity: O(1). Because the output array does not count as space
+Space complexity: O(n).
 """
 
 class Solution:
@@ -71,3 +76,4 @@ class Solution:
                 squares[(r // 3, c // 3)].add(board[r][c])
 
         return True
+
