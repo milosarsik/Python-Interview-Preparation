@@ -1081,8 +1081,11 @@ class Queue:
 | NC.io (3)   | [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/EvaluateReversePolishNotation.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=iu0082c4HDE&ab_channel=NeetCode) |
 | NC.io (4)   | [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/GenerateParentheses.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=s9fokUqJ76A&ab_channel=NeetCode) |
 | NC.io (5)   | [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/DailyTemperatures.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=cTBiBSnjO3c&ab_channel=NeetCode) |
-| NC.io (5)   | [853. Car Fleet](https://leetcode.com/problems/car-fleet/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/CarFleet.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=Pr6T-3yB9RM&ab_channel=NeetCode) |
-| NC.io (5)   | [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/LargestRectangleinHistogram.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=zx5Sw9130L0&ab_channel=NeetCode) |
+| NC.io (6)   | [853. Car Fleet](https://leetcode.com/problems/car-fleet/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/CarFleet.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=Pr6T-3yB9RM&ab_channel=NeetCode) |
+| NC.io (7)   | [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) 🟡 | [Code](https://github.com/milosarsik/Python-Interview-Preparation/blob/main/LeetCode/Stacks/Medium/LargestRectangleinHistogram.py) | :heavy_check_mark: |  <br/>Time Complexity: O(n)<br/>Space Complexity: O(1) | [Video](https://www.youtube.com/watch?v=zx5Sw9130L0&ab_channel=NeetCode) |
+
+
+
 
 
 ## Binary Trees
