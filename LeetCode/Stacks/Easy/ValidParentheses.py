@@ -1,7 +1,6 @@
 """
 ------------------------------------------------------------------------------------------------------------------------------------------------
-20. Valid Parentheses (Blind)(LeetCode)
-------------------------------------------------------------------------------------------------------------------------------------------------
+20. Valid Parentheses (NeetCode)
 
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -29,7 +28,6 @@ Output: false
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Solution Walkthrough
-------------------------------------------------------------------------------------------------------------------------------------------------
 
 In order for two parentheses to be valid, there must be an opening and it must be followed by a closing. We can use a STACK data structure
 in order to peek and pop at/from the top. This will give us the ability to check the next parentheses. We are going to create a HASHMAP to find the 
@@ -66,3 +64,18 @@ def isValid(self, s: str) -> bool:
             stack.append(c)
 
     return True if not stack else False 
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        Map = {")": "(", "]": "[", "}": "{"}
+        stack = []
+
+        for c in s:
+            if c not in Map:
+                stack.append(c)
+                continue
+            if not stack or stack[-1] != Map[c]:
+                return False
+            stack.pop()
+
+        return not stack
