@@ -1,7 +1,6 @@
 """
 ------------------------------------------------------------------------------------------------------------------------------------------------
-155. Min Stack (EPI)(Blind)(LeetCode)
-------------------------------------------------------------------------------------------------------------------------------------------------
+155. Min Stack (NeetCode)
 
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
@@ -35,7 +34,7 @@ minStack.getMin(); // return -2
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Solution Walkthrough
-------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 The simplest way to have access to the minimum value at O(1) time is to have another stack that keeps track of the minimum everytime a new value
 is added to the stack. The rest of the operations are very basic.
